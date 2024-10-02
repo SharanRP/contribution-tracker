@@ -88,8 +88,22 @@ const Announcements = ({ isAdmin }) => {
         color="white"
         display="flex"
         flexDirection="column"
+        boxShadow="0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(255, 255, 255, 0.1)"
+        position="relative"
+        overflow="hidden"
+        _before={{
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: "rgba(26, 32, 44, 0.7)",
+          backdropFilter: "blur(50px)",
+          zIndex: -1,
+        }}
+        className="border-2 w-full h-full mt-12 border-gray-600 shadow-[75_20px_30px_rgba(75,_112,_184,_0.7)] "
         justifyContent="center"
-        className="w-full h-full mt-12"
       >
         <Heading
           mb={6}

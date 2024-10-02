@@ -115,6 +115,7 @@ const ProgressChart = ({ repositories }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
+        className="bg-gray-700 p-6 rounded-lg shadow-xl mt-6"
       >
         <Box bg="gray.700" p={6} borderRadius="lg" boxShadow="xl" mt={6}>
           <Heading as="h3" size="lg" color="white" mb={4}>
@@ -159,7 +160,27 @@ const ProgressChart = ({ repositories }) => {
   };
 
   return (
-    <Box width="100%" height="600px" p={6} bg="gray.800" borderRadius="xl" boxShadow="2xl">
+    <Box
+      width="100%"
+      height="600px"
+      p={6}
+      borderRadius="xl"
+      boxShadow="0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(255, 255, 255, 0.1)"
+      position="relative"
+      overflow="hidden"
+      _before={{
+        content: '""',
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: "rgba(26, 32, 44, 0.7)",
+        backdropFilter: "blur(70px)",
+        zIndex: -1,
+      }}
+      className="border-2 border-gray-600 shadow-[75_20px_30px_rgba(75,_112,_184,_0.7)] "
+     >
       <Heading as="h2" size="xl" color="white" mb={6} textAlign="center">
         Team Progress: Commits & Contributions
       </Heading>
