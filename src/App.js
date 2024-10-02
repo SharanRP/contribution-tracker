@@ -126,17 +126,20 @@ const App = () => {
     setIsAdmin(false);
   };
 
+  // <div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
+
   return (
     <Router>
+      {/* <div className=""></div> */}
       <Box
-        bg="black"
+        // bg="black"
         minH="100vh"
         p={6}
-        backgroundImage="linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(30,30,30,0.8)), url('/path-to-tech-grid-background.png')"
+        // backgroundImage="linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(30,30,30,0.8)), url('/path-to-tech-grid-background.png')"
         backgroundSize="cover"
         backgroundAttachment="fixed"
-        color="white"
-        className="mt-12 mb-12"
+        // color="white"
+        className=" min-h-[100vh] absolute top-0 z-[-2] w-full bg-[#000] bg-[radial-gradient(#808080,#00091d_1px)] bg-[size:20px_20px]"
       >
         <Navbar isAdmin={isAdmin} onLogout={handleLogout} />
         <Container maxW="container.4xl" py={8}>
@@ -201,6 +204,7 @@ const App = () => {
           </VStack>
         </Container>
       </Box>
+      
     </Router>
   );
 };

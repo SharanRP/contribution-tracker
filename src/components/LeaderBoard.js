@@ -66,11 +66,24 @@ const Leaderboard = ({ repositories }) => {
 
   return (
     <Box
-      bgGradient="linear(to-r, #1A202C, #2D3748)"
-      minH="100vh"
-      py={12}
-      px={4}
-      className="mt-6 w-full "
+    height="600px"
+    p={6}
+    borderRadius="xl"
+    boxShadow="0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(255, 255, 255, 0.1)"
+    position="relative"
+    overflow="hidden"
+    _before={{
+      content: '""',
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: "rgba(26, 32, 44, 0.7)",
+      backdropFilter: "blur(70px)",
+      zIndex: -1,
+    }}
+      className="mt-6 border-2 shadow-[0_20px_30px_rgba(75,_112,_184,_0.7)] min-h-[100vh] border-gray-600 w-full "
     >
       <Container maxW="container.2xl">
         <MotionBox
