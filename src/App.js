@@ -136,6 +136,7 @@ const App = () => {
         backgroundSize="cover"
         backgroundAttachment="fixed"
         color="white"
+        className="mt-12 mb-12"
       >
         <Navbar isAdmin={isAdmin} onLogout={handleLogout} />
         <Container maxW="container.4xl" py={8}>

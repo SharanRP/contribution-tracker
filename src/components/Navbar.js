@@ -19,12 +19,12 @@ const Navbar = ({ isAdmin, onLogout }) => {
   return (
     <motion.div initial="hidden" animate="visible" variants={fadeIn}>
       <Box
-        className="w-full fixed top-0 left-0 right-0 z-10 shadow-md transition-all duration-300"
+        className="w-full mb-6 fixed top-0 left-0 right-0 z-10 shadow-md transition-all duration-300"
         bg={bgColor}
         px={6}
         py={4}
       >
-        <Flex className="max-w-7xl mx-auto justify-between items-center">
+        <Flex className="max-w-8xl mx-auto justify-between items-center">
           {/* Title on the left */}
           <Heading as="h1" size="lg" color="white" fontWeight="bold">
             <ChakraLink

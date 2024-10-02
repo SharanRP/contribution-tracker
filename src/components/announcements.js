@@ -89,6 +89,7 @@ const Announcements = ({ isAdmin }) => {
         display="flex"
         flexDirection="column"
         justifyContent="center"
+        className="w-full h-full mt-12"
       >
         <Heading
           mb={6}
