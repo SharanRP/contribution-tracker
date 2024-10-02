@@ -1,16 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { Box, Heading, Spinner, Text, VStack } from "@chakra-ui/react";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { Box, VStack, Spinner, Text, Container, useColorMode, Button, Grid, GridItem } from "@chakra-ui/react";
 import axios from "axios";
-import ProgressChart from "./ProgressChart";
-import Leaderboard from "./LeaderBoard";
-import TimelineFilter from "./TimelineFilter";
+import { motion } from "framer-motion";
+import Navbar from "./components/Navbar";
+import ProgressChart from "./components/ProgressChart";
+import Leaderboard from "./components/LeaderBoard";
+import TimelineFilter from "./components/TimelineFilter";
+import Announcements from "./components/announcements";
+import Login from "./components/Login";
+
+// Motion variants for animations
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 const App = () => {
   const [repositories, setRepositories] = useState([]);
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null); // To handle errors
+  const [error, setError] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const repoUrls = [
     "https://github.com/TanayGada/BlocTick",
@@ -18,22 +30,10 @@ const App = () => {
     // Add more repo URLs here
   ];
 
-  const [isAdmin, setIsAdmin] = useState(false);
-
-  const handleLogin = () => {
-    // In a real app, you'd check credentials here.
-    setIsAdmin(true);
-  };
-
-  const handleLogout = () => {
-    setIsAdmin(false);
-  };
-
-
   useEffect(() => {
     const fetchAllRepoProgress = async () => {
       setLoading(true);
-      setError(null); // Reset any previous errors
+      setError(null);
       const token = process.env.REACT_APP_GITHUB_TOKEN;
       const headers = { Authorization: `token ${token}` };
 
@@ -44,13 +44,11 @@ const App = () => {
           const repo = ownerRepo[1];
 
           try {
-            // Fetch repository details (stars, forks, branches)
             const repoResponse = await axios.get(
               `https://api.github.com/repos/${owner}/${repo}`,
               { headers }
             );
 
-            // Fetch commits by branch
             const branchesResponse = await axios.get(
               `https://api.github.com/repos/${owner}/${repo}/branches`,
               { headers }
@@ -58,23 +56,33 @@ const App = () => {
 
             const branches = branchesResponse.data.map(branch => branch.name);
 
-            // Fetch commit and contribution details for each branch
+            const fetchCommits = async (branch, page = 1, commits = []) => {
+              const commitsResponse = await axios.get(
+                `https://api.github.com/repos/${owner}/${repo}/commits`,
+                {
+                  headers,
+                  params: {
+                    sha: branch,
+                    since: startDate,
+                    until: endDate,
+                    per_page: 100, 
+                    page,
+                  },
+                }
+              );
+
+              const newCommits = commitsResponse.data;
+              if (newCommits.length === 100) {
+                return fetchCommits(branch, page + 1, [...commits, ...newCommits]);
+              } else {
+                return [...commits, ...newCommits];
+              }
+            };
+
             const branchContributions = await Promise.all(
               branches.map(async (branch) => {
-                const commitsResponse = await axios.get(
-                  `https://api.github.com/repos/${owner}/${repo}/commits`,
-                  {
-                    headers,
-                    params: {
-                      sha: branch, // Fetch commits for the specific branch
-                      since: startDate,
-                      until: endDate,
-                    },
-                  }
-                );
-                const commitsData = commitsResponse.data;
+                const commitsData = await fetchCommits(branch);
 
-                // Calculate weekly contributions by author
                 const contributionsByAuthor = commitsData.reduce((acc, commit) => {
                   const author = commit.author?.login || "Unknown";
                   acc[author] = (acc[author] || 0) + 1;
@@ -89,12 +97,11 @@ const App = () => {
               })
             );
 
-            // Return consolidated data for each repository
             return {
               name: repo,
               stars: repoResponse.data.stargazers_count,
               forks: repoResponse.data.forks_count,
-              branches: branchContributions, // Array of branch data
+              branches: branchContributions,
             };
           } catch (error) {
             console.error(`Error fetching data for ${repo}:`, error);
@@ -104,7 +111,6 @@ const App = () => {
         })
       );
 
-      // Filter out any null values from failed fetches
       setRepositories(progressData.filter((repo) => repo !== null));
       setLoading(false);
     };
@@ -114,55 +120,87 @@ const App = () => {
     }
   }, [startDate, endDate]);
 
+  const handleLogout = () => {
+    localStorage.removeItem('adminToken');
+    delete axios.defaults.headers.common['Authorization'];
+    setIsAdmin(false);
+  };
+
   return (
-    <Box  p={4} bg="gray.800" color="white" minH="100vh">
-      <VStack spacing={6}>
-        <Heading as="h1" mb={4} textAlign="center">
-          Repository Progress Tracker
-        </Heading>
-
-        {/* Timeline Filter */}
-        <TimelineFilter
-          startDate={startDate}
-          endDate={endDate}
-          setStartDate={setStartDate}
-          setEndDate={setEndDate}
-        />
-
-        {/* Display loading spinner */}
-        {loading ? (
-          <Box display="flex" justifyContent="center" alignItems="center" mt={8}>
-            <Spinner size="xl" />
-            <Text ml={4}>Fetching repository data...</Text>
-          </Box>
-        ) : (
-          <div minW="100vh">
-            {/* Error Handling */}
-            {error && (
-              <Text color="red.500" mt={4}>
-                {error}
-              </Text>
-            )}
-
-            {/* Display chart and leaderboard if data is available */}
-            {repositories.length > 0 ? (
-              <>
-                <ProgressChart
-                  repositories={repositories}
-                  startDate={startDate}
-                  endDate={endDate}
-                />
-                <Leaderboard repositories={repositories} />
-              </>
-            ) : (
-              <Text mt={6} textAlign="center">
-                No data available for the selected timeline.
-              </Text>
-            )}
-          </div>
-        )}
-      </VStack>
-    </Box>
+    <Router>
+      <Box
+        bg="black"
+        minH="100vh"
+        p={6}
+        backgroundImage="linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(30,30,30,0.8)), url('/path-to-tech-grid-background.png')"
+        backgroundSize="cover"
+        backgroundAttachment="fixed"
+        color="white"
+      >
+        <Navbar isAdmin={isAdmin} onLogout={handleLogout} />
+        <Container maxW="container.4xl" py={8}>
+          <VStack spacing={6} align="stretch">
+            <Routes>
+              <Route path="/login" element={<Login setIsAdmin={setIsAdmin} />} />
+              <Route
+                path="/admin"
+                element={
+                  isAdmin ? (
+                    <Announcements isAdmin={isAdmin} />
+                  ) : (
+                    <Navigate to="/login" replace />
+                  )
+                }
+              />
+              <Route
+                path="/"
+                element={
+                  <>
+                    <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+                      <TimelineFilter
+                        startDate={startDate}
+                        endDate={endDate}
+                        setStartDate={setStartDate}
+                        setEndDate={setEndDate}
+                      />
+                    </motion.div>
+                    {loading ? (
+                      <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+                        <Box display="flex" justifyContent="center" alignItems="center" mt={8}>
+                          <Spinner size="xl" speed="0.65s" color="teal.300" />
+                          <Text ml={4}>Fetching repository data...</Text>
+                        </Box>
+                      </motion.div>
+                    ) : (
+                      <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+                        <VStack spacing={6} width="100%">
+                          {error && (
+                            <Text color="red.500" mt={4}>
+                              {error}
+                            </Text>
+                          )}
+                          {repositories.length > 0 ? (
+                            <>
+                              <ProgressChart repositories={repositories} startDate={startDate} endDate={endDate} />
+                              <Leaderboard repositories={repositories} />
+                            </>
+                          ) : (
+                            <Text mt={6} textAlign="center">
+                              No data available for the selected timeline.
+                            </Text>
+                          )}
+                        </VStack>
+                      </motion.div>
+                    )}
+                  </>
+                }
+              />
+              <Route path = "/posts" element={<Announcements isAdmin={false}/>} />
+            </Routes>
+          </VStack>
+        </Container>
+      </Box>
+    </Router>
   );
 };
 
