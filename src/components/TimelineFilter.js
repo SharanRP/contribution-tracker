@@ -9,7 +9,7 @@ const TimelineFilter = ({ startDate, endDate, setStartDate, setEndDate }) => {
   }, [startDate, endDate, setStartDate, setEndDate]);
 
   return (
-    <Flex align="center" justify="space-between" wrap="wrap">
+    <Flex align="center" justify="space-between" wrap="wrap" className="mt-12">
       <Box>
         <FormLabel color="white">Start Date</FormLabel>
         <Input

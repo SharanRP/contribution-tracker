@@ -15,6 +15,7 @@ import {
   Avatar,
   Tooltip,
   Button,
+  AvatarGroup,  
   usePrefersReducedMotion,
 } from "@chakra-ui/react";
 import { FaStar, FaCodeBranch, FaCode } from "react-icons/fa";
@@ -64,8 +65,14 @@ const Leaderboard = ({ repositories }) => {
   };
 
   return (
-    <Box bg="gray.900" minH="100vh" minW="100vh" py={12}>
-      <Container maxW="container.xl">
+    <Box
+      bgGradient="linear(to-r, #1A202C, #2D3748)"
+      minH="100vh"
+      py={12}
+      px={4}
+      className="mt-6 w-full "
+    >
+      <Container maxW="container.2xl">
         <MotionBox
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -104,13 +111,17 @@ const Leaderboard = ({ repositories }) => {
               <Radio value="all-time" size="lg">
                 <HStack>
                   <Icon as={MdDateRange} w={5} h={5} />
-                  <Text fontSize="lg" fontWeight="medium">All-Time</Text>
+                  <Text fontSize="lg" fontWeight="medium">
+                    All-Time
+                  </Text>
                 </HStack>
               </Radio>
               <Radio value="weekly" size="lg">
                 <HStack>
                   <Icon as={MdAccessTime} w={5} h={5} />
-                  <Text fontSize="lg" fontWeight="medium">Weekly</Text>
+                  <Text fontSize="lg" fontWeight="medium">
+                    Weekly
+                  </Text>
                 </HStack>
               </Radio>
             </HStack>
@@ -143,10 +154,10 @@ const Leaderboard = ({ repositories }) => {
                 <MotionBox
                   key={repo.name}
                   variants={itemVariants}
-                  bg="gray.800"
+                  bgGradient="linear(to-r, gray.700, gray.800)"
                   p={8}
                   borderRadius="xl"
-                  boxShadow="xl"
+                  boxShadow="2xl"
                   transition={{ duration: 0.3 }}
                   whileHover={{ y: -4, boxShadow: "2xl" }}
                 >
@@ -172,7 +183,13 @@ const Leaderboard = ({ repositories }) => {
                     </HStack>
                     <HStack spacing={6}>
                       <Tooltip label="Stars" hasArrow placement="top">
-                        <Badge colorScheme="yellow" fontSize="lg" px={4} py={2} borderRadius="md">
+                        <Badge
+                          colorScheme="yellow"
+                          fontSize="lg"
+                          px={4}
+                          py={2}
+                          borderRadius="md"
+                        >
                           <HStack spacing={2}>
                             <Icon as={FaStar} w={5} h={5} />
                             <Text fontWeight="bold">{repo.stars}</Text>
@@ -180,7 +197,13 @@ const Leaderboard = ({ repositories }) => {
                         </Badge>
                       </Tooltip>
                       <Tooltip label="Forks" hasArrow placement="top">
-                        <Badge colorScheme="blue" fontSize="lg" px={4} py={2} borderRadius="md">
+                        <Badge
+                          colorScheme="blue"
+                          fontSize="lg"
+                          px={4}
+                          py={2}
+                          borderRadius="md"
+                        >
                           <HStack spacing={2}>
                             <Icon as={FaCodeBranch} w={5} h={5} />
                             <Text fontWeight="bold">{repo.forks}</Text>
@@ -188,7 +211,13 @@ const Leaderboard = ({ repositories }) => {
                         </Badge>
                       </Tooltip>
                       <Tooltip label="Commits" hasArrow placement="top">
-                        <Badge colorScheme="green" fontSize="lg" px={4} py={2} borderRadius="md">
+                        <Badge
+                          colorScheme="green"
+                          fontSize="lg"
+                          px={4}
+                          py={2}
+                          borderRadius="md"
+                        >
                           <HStack spacing={2}>
                             <Icon as={FaCode} w={5} h={5} />
                             <Text fontWeight="bold">{repo.commits}</Text>
@@ -201,51 +230,57 @@ const Leaderboard = ({ repositories }) => {
                   <Text color="gray.400" fontSize="lg" mb={4} fontWeight="medium">
                     Top Contributors:{" "}
                     {repo.contributors && repo.contributors.length
-                        ? repo.contributors.map((contributor) => contributor.name).join(", ")
-                        : "No contributors available"}
-                    </Text>
+                      ? repo.contributors.map((contributor) => contributor.name).join(", ")
+                      : "No contributors available"}
+                  </Text>
 
-                    <HStack spacing={6} wrap="wrap">
-                    {(repo.contributors || []).slice(0, 5).map((contributor, idx) => (
-                        <Tooltip key={idx} label={`${contributor.commits} commits`} hasArrow placement="top">
+                  <HStack spacing={6} wrap="wrap">
+                    {(repo.contributors || []).slice(0, 3 ).map((contributor, idx) => (
+                      <Tooltip key={idx} label={`${contributor.commits} commits`} hasArrow placement="top">
                         <MotionBox
-                            as={HStack}
-                            bg="gray.700"
-                            p={2}
-                            borderRadius="full"
-                            whileHover={{ scale: 1.05, backgroundColor: "gray.600" }}
-                            transition={{ duration: 0.2 }}
+                          as={HStack}
+                          bg="gray.700"
+                          p={2}
+                          borderRadius="full"
+                          whileHover={{ scale: 1.05, backgroundColor: "gray.600" }}
+                          transition={{ duration: 0.2 }}
                         >
-                            <Avatar size="md" name={contributor.name} src={contributor.avatar} />
-                            <Text color="white" fontWeight="medium" fontSize="md">
+                          <Avatar size="md" name={contributor.name} src={contributor.avatar} />
+                          <Text color="white" fontWeight="medium" fontSize="md">
                             {contributor.name}
-                            </Text>
+                          </Text>
                         </MotionBox>
-                        </Tooltip>
+                      </Tooltip>
                     ))}
-                    </HStack>
+                  </HStack>
 
+                  <Flex justify="space-between" align="center">
+                    <AvatarGroup size="md" max={5}>
+                      {(repo.contributors || []).map((contributor) => (
+                        <Avatar
+                          key={contributor.name}
+                          name={contributor.name}
+                          src={contributor.avatar_url}
+                        />
+                      ))}
+                    </AvatarGroup>
 
-                  <Button
-                    as="a"
-                    href={repo.url}
-                    target="_blank"
-                    mt={6}
-                    size="lg"
-                    colorScheme="teal"
-                    leftIcon={<MdOpenInNew />}
-                  >
-                    View Repository
-                  </Button>
+                    <Button
+                      as="a"
+                      href={repo.url}
+                      target="_blank"
+                      colorScheme="teal"
+                      size="lg"
+                      rightIcon={<MdOpenInNew />}
+                    >
+                      View Repository
+                    </Button>
+                  </Flex>
                 </MotionBox>
               ))}
             </VStack>
           </MotionBox>
         </AnimatePresence>
-
-        <Text mt={12} color="gray.400" textAlign="center" fontSize="md">
-          Showing {sortedRepositories.length} repositories sorted by {sortBy}.
-        </Text>
       </Container>
     </Box>
   );
