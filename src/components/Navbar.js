@@ -45,8 +45,8 @@ const Navbar = ({ isAdmin, onLogout }) => {
               mr={4}
               colorScheme="teal"
               variant="ghost"
-              whileHover={{ scale: 1.1 }} // Animation on hover
-              whileTap={{ scale: 0.9 }} // Animation on click
+              whilehover={{ scale: 1.1 }} // Animation on hover
+              whiletap={{ scale: 0.9 }} // Animation on click
             >
               {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
@@ -59,8 +59,8 @@ const Navbar = ({ isAdmin, onLogout }) => {
               variant="ghost"
               _hover={{ bg: hoverBg }}
               transition="background 0.3s ease"
-              whileHover={{ scale: 1.1 }} // Animation on hover
-              whileTap={{ scale: 0.9 }} // Animation on click
+              whilehover={{ scale: 1.1 }} // Animation on hover
+              whiletap={{ scale: 0.9 }} // Animation on click
             >
               Home
             </Button>
@@ -71,8 +71,8 @@ const Navbar = ({ isAdmin, onLogout }) => {
               variant="ghost"
               _hover={{ bg: hoverBg }}
               transition="background 0.3s ease"
-              whileHover={{ scale: 1.1 }} // Animation on hover
-              whileTap={{ scale: 0.9 }} // Animation on click
+              whilehover={{ scale: 1.1 }} // Animation on hover
+              whiletap={{ scale: 0.9 }} // Animation on click
             >
               Posts
             </Button>
@@ -87,8 +87,8 @@ const Navbar = ({ isAdmin, onLogout }) => {
                   variant="solid"
                   _hover={{ bg: hoverBg }}
                   transition="background 0.3s ease"
-                  whileHover={{ scale: 1.1 }} // Animation on hover
-                  whileTap={{ scale: 0.9 }} // Animation on click
+                  whilehover={{ scale: 1.1 }} // Animation on hover
+                  whiletap={{ scale: 0.9 }} // Animation on click
                 >
                   Admin Panel
                 </Button>
@@ -98,8 +98,8 @@ const Navbar = ({ isAdmin, onLogout }) => {
                   variant="solid"
                   _hover={{ bg: "red.600" }}
                   transition="background 0.3s ease"
-                  whileHover={{ scale: 1.1 }} // Animation on hover
-                  whileTap={{ scale: 0.9 }} // Animation on click
+                  whilehover={{ scale: 1.1 }} // Animation on hover
+                  whiletap={{ scale: 0.9 }} // Animation on click
                 >
                   Logout
                 </Button>
@@ -112,8 +112,8 @@ const Navbar = ({ isAdmin, onLogout }) => {
                 variant="solid"
                 _hover={{ bg: hoverBg }}
                 transition="background 0.3s ease"
-                whileHover={{ scale: 1.1 }} // Animation on hover
-                whileTap={{ scale: 0.9 }} // Animation on click
+                whilehover={{ scale: 1.1 }} // Animation on hover
+                whiletap={{ scale: 0.9 }} // Animation on click
               >
                 Login
               </Button>
