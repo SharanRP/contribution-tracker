@@ -66,25 +66,25 @@ const Leaderboard = ({ repositories }) => {
 
   return (
     <Box
-    height="600px"
-    p={6}
-    borderRadius="xl"
-    boxShadow="0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(255, 255, 255, 0.1)"
-    position="relative"
-    overflowY="auto"
-    maxHeight="700px"
-    _before={{
-      content: '""',
-      position: "absolute",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      background: "rgba(26, 32, 44, 0.7)",
-      backdropFilter: "blur(70px)",
-      zIndex: -1,
-    }}
-      className="mt-6 border-2 shadow-[0_20px_30px_rgba(75,_112,_184,_0.7)] min-h-[100vh] border-gray-600 w-full "
+      height="600px"
+      p={6}
+      borderRadius="xl"
+      boxShadow="0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(255, 255, 255, 0.1)"
+      position="relative"
+      overflowY="auto"
+      maxHeight="700px"
+      _before={{
+        content: '""',
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: "rgba(26, 32, 44, 0.7)",
+        backdropFilter: "blur(70px)",
+        zIndex: -1,
+      }}
+      className="mt-6 border-2 shadow-[0_20px_30px_rgba(75,_112,_184,_0.7)] min-h-[100vh] border-gray-600 w-full"
     >
       <Container maxW="container.2xl">
         <MotionBox
@@ -150,6 +150,12 @@ const Leaderboard = ({ repositories }) => {
             fontSize="lg"
             borderColor="gray.600"
             _hover={{ borderColor: "gray.500" }}
+            sx={{
+              '& option': {
+                backgroundColor: "rgba(26, 32, 44, 0.7)",
+                color: "white"
+              }
+            }}
           >
             <option value="commits">Sort by Commits</option>
             <option value="stars">Sort by Stars</option>
@@ -173,7 +179,7 @@ const Leaderboard = ({ repositories }) => {
                   borderRadius="xl"
                   boxShadow="2xl"
                   transition={{ duration: 0.3 }}
-                  whileHover={{ y: -4, boxShadow: "2xl" }}
+                  whilehover={{ y: -4, boxShadow: "2xl" }}
                 >
                   <Flex justify="space-between" align="center" mb={6}>
                     <HStack spacing={4}>
@@ -249,14 +255,14 @@ const Leaderboard = ({ repositories }) => {
                   </Text>
 
                   <HStack spacing={6} wrap="wrap">
-                    {(repo.contributors || []).slice(0, 3 ).map((contributor, idx) => (
+                    {(repo.contributors || []).slice(0, 3).map((contributor, idx) => (
                       <Tooltip key={idx} label={`${contributor.commits} commits`} hasArrow placement="top">
                         <MotionBox
                           as={HStack}
                           bg="gray.700"
                           p={2}
                           borderRadius="full"
-                          whileHover={{ scale: 1.05, backgroundColor: "gray.600" }}
+                          whilehover={{ scale: 1.05, backgroundColor: "gray.600" }}
                           transition={{ duration: 0.2 }}
                         >
                           <Avatar size="md" name={contributor.name} src={contributor.avatar} />
