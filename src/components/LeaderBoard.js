@@ -71,7 +71,8 @@ const Leaderboard = ({ repositories }) => {
     borderRadius="xl"
     boxShadow="0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(255, 255, 255, 0.1)"
     position="relative"
-    overflow="hidden"
+    overflowY="auto"
+    maxHeight="700px"
     _before={{
       content: '""',
       position: "absolute",
