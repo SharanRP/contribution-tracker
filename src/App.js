@@ -34,102 +34,132 @@ const App = () => {
     // Add more repo URLs here
   ];
 
+  // useEffect(() => {
+  //   const fetchAllRepoProgress = async () => {
+  //     setLoading(true);
+  //     setError(null);
+  //     const token = process.env.REACT_APP_GITHUB_TOKEN;
+  //     const headers = { Authorization: `token ${token}` };
+
+  //     const progressData = await Promise.all(
+  //       repoUrls.map(async (repoUrl) => {
+  //         const ownerRepo = repoUrl.replace("https://github.com/", "").split("/");
+  //         const owner = ownerRepo[0];
+  //         const repo = ownerRepo[1];
+
+  //         try {
+  //           const repoResponse = await axios.get(
+  //             `https://api.github.com/repos/${owner}/${repo}`,
+  //             { headers }
+  //           );
+
+  //           const branchesResponse = await axios.get(
+  //             `https://api.github.com/repos/${owner}/${repo}/branches`,
+  //             { headers }
+  //           );
+
+  //           const branches = branchesResponse.data.map(branch => branch.name);
+
+  //           const fetchCommits = async (branch, page = 1, commits = []) => {
+  //             const commitsResponse = await axios.get(
+  //               `https://api.github.com/repos/${owner}/${repo}/commits`,
+  //               {
+  //                 headers,
+  //                 params: {
+  //                   sha: branch,
+  //                   since: startDate,
+  //                   until: endDate,
+  //                   per_page: 100,
+  //                   page,
+  //                 },
+  //               }
+  //             );
+
+  //             const newCommits = commitsResponse.data;
+  //             if (newCommits.length === 100) {
+  //               return fetchCommits(branch, page + 1, [...commits, ...newCommits]);
+  //             } else {
+  //               return [...commits, ...newCommits];
+  //             }
+  //           };
+
+  //           const branchContributions = await Promise.all(
+  //             branches.map(async (branch) => {
+  //               const commitsData = await fetchCommits(branch);
+
+  //               const contributionsByAuthor = commitsData.reduce((acc, commit) => {
+  //                 const author = commit.author?.login || "Unknown";
+  //                 acc[author] = (acc[author] || 0) + 1;
+  //                 return acc;
+  //               }, {});
+
+  //               return {
+  //                 branch,
+  //                 totalCommits: commitsData.length,
+  //                 contributionsByAuthor,
+  //               };
+  //             })
+  //           );
+
+  //           const totalCommitsAcrossBranches = branchContributions.reduce(
+  //             (acc, branch) => acc + branch.totalCommits,
+  //             0
+  //           );
+
+  //           return {
+  //             name: repo,
+  //             stars: repoResponse.data.stargazers_count,
+  //             forks: repoResponse.data.forks_count,
+  //             branches: branchContributions,
+  //             commits: totalCommitsAcrossBranches,
+  //             url: repoResponse.data.html_url
+  //           };
+  //         } catch (error) {
+  //           console.error(`Error fetching data for ${repo}:`, error);
+  //           setError("Failed to fetch some repositories.");
+  //           return null;
+  //         }
+  //       })
+  //     );
+
+  //     setRepositories(progressData.filter((repo) => repo !== null));
+  //     setLoading(false);
+  //   };
+
+  //   if (startDate && endDate) {
+  //     fetchAllRepoProgress();
+  //   }
+  // }, [startDate, endDate]);
+
+
+
+
+  
   useEffect(() => {
     const fetchAllRepoProgress = async () => {
+      if (!startDate || !endDate) return;
+
       setLoading(true);
       setError(null);
-      const token = process.env.REACT_APP_GITHUB_TOKEN;
-      const headers = { Authorization: `token ${token}` };
 
-      const progressData = await Promise.all(
-        repoUrls.map(async (repoUrl) => {
-          const ownerRepo = repoUrl.replace("https://github.com/", "").split("/");
-          const owner = ownerRepo[0];
-          const repo = ownerRepo[1];
-
-          try {
-            const repoResponse = await axios.get(
-              `https://api.github.com/repos/${owner}/${repo}`,
-              { headers }
-            );
-
-            const branchesResponse = await axios.get(
-              `https://api.github.com/repos/${owner}/${repo}/branches`,
-              { headers }
-            );
-
-            const branches = branchesResponse.data.map(branch => branch.name);
-
-            const fetchCommits = async (branch, page = 1, commits = []) => {
-              const commitsResponse = await axios.get(
-                `https://api.github.com/repos/${owner}/${repo}/commits`,
-                {
-                  headers,
-                  params: {
-                    sha: branch,
-                    since: startDate,
-                    until: endDate,
-                    per_page: 100,
-                    page,
-                  },
-                }
-              );
-
-              const newCommits = commitsResponse.data;
-              if (newCommits.length === 100) {
-                return fetchCommits(branch, page + 1, [...commits, ...newCommits]);
-              } else {
-                return [...commits, ...newCommits];
-              }
-            };
-
-            const branchContributions = await Promise.all(
-              branches.map(async (branch) => {
-                const commitsData = await fetchCommits(branch);
-
-                const contributionsByAuthor = commitsData.reduce((acc, commit) => {
-                  const author = commit.author?.login || "Unknown";
-                  acc[author] = (acc[author] || 0) + 1;
-                  return acc;
-                }, {});
-
-                return {
-                  branch,
-                  totalCommits: commitsData.length,
-                  contributionsByAuthor,
-                };
-              })
-            );
-
-            const totalCommitsAcrossBranches = branchContributions.reduce(
-              (acc, branch) => acc + branch.totalCommits,
-              0
-            );
-
-            return {
-              name: repo,
-              stars: repoResponse.data.stargazers_count,
-              forks: repoResponse.data.forks_count,
-              branches: branchContributions,
-              commits: totalCommitsAcrossBranches,
-              url: repoResponse.data.html_url
-            };
-          } catch (error) {
-            console.error(`Error fetching data for ${repo}:`, error);
-            setError("Failed to fetch some repositories.");
-            return null;
-          }
-        })
-      );
-
-      setRepositories(progressData.filter((repo) => repo !== null));
-      setLoading(false);
+      try {
+        const response = await axios.post('http://localhost:5000/api/repo-progress', {
+          startDate,
+          endDate
+        });
+        // console.log(response.data.repositories);
+        setRepositories(response.data.repositories);
+      } catch (error) {
+        console.error('Error fetching repository data:', error);
+        setError("Failed to fetch repository data.");
+      } finally {
+        setLoading(false);
+      }
     };
 
-    if (startDate && endDate) {
-      fetchAllRepoProgress();
-    }
+    fetchAllRepoProgress();
   }, [startDate, endDate]);
+
 
   const handleLogout = () => {
     localStorage.removeItem('adminToken');
