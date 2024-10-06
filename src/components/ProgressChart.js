@@ -117,7 +117,7 @@ const ProgressChart = ({ repositories }) => {
         transition={{ duration: 0.5 }}
         className="bg-gray-700 p-6 rounded-lg shadow-xl mt-6"
       >
-        <Box bg="gray.700" p={6} borderRadius="lg" boxShadow="xl" mt={6}>
+        <Box bg="gray.700" p={6} borderRadius="lg" boxShadow="xl" mt={6} maxHeight="400px" overflowY="auto" >
           <Heading as="h3" size="lg" color="white" mb={4}>
             Contributions for {selectedRepo.name} ({branch} branch)
           </Heading>

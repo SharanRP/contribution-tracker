@@ -27,6 +27,8 @@ const App = () => {
   const repoUrls = [
     "https://github.com/TanayGada/BlocTick",
     "https://github.com/NiranjanMore10/EventMint",
+    "https://github.com/adiawaskar/FreelanceHub",
+    "https://github.com/SharanRP/contribution-tracker",
     // Add more repo URLs here
   ];
 
@@ -97,11 +99,18 @@ const App = () => {
               })
             );
 
+            const totalCommitsAcrossBranches = branchContributions.reduce(
+              (acc, branch) => acc + branch.totalCommits,
+              0
+            );
+
             return {
               name: repo,
               stars: repoResponse.data.stargazers_count,
               forks: repoResponse.data.forks_count,
               branches: branchContributions,
+              commits: totalCommitsAcrossBranches,
+              url: repoResponse.data.html_url
             };
           } catch (error) {
             console.error(`Error fetching data for ${repo}:`, error);
