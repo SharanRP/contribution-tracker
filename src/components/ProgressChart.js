@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import { Bar } from "react-chartjs-2";
+import React, { useState, useMemo } from 'react';
+import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   BarElement,
-  LineElement,
   PointElement,
+  LineElement,
+  Title,
   Tooltip,
   Legend,
-  Title,
-} from "chart.js";
-import { Box, Heading, Text, Button, VStack, Select, HStack, Badge, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, Flex } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+} from 'chart.js';
+import { AlertCircle, GitBranch, GitPullRequest, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
   BarElement,
-  LineElement,
   PointElement,
+  LineElement,
   Title,
   Tooltip,
   Legend
@@ -27,175 +27,194 @@ ChartJS.register(
 
 const ProgressChart = ({ repositories }) => {
   const [selectedRepo, setSelectedRepo] = useState(null);
-  const [branch, setBranch] = useState("main");
-  const [showDetails, setShowDetails] = useState(false);
+  const [selectedBranch, setSelectedBranch] = useState('main');
 
-  if (!repositories || repositories.length === 0) {
-    return <Box>No repository data available</Box>;
-  }
-
-  const data = {
-    labels: repositories.map((repo) => repo.name || 'Unnamed Repo'),
+  const chartData = useMemo(() => ({
+    labels: repositories.map(repo => repo.name),
     datasets: [
       {
-        type: "bar",
-        label: "Commits",
-        data: repositories.map((repo) => 
-          repo.branches?.find(b => b.branch === branch)?.totalCommits || 0
+        type: 'bar',
+        label: 'Commits',
+        data: repositories.map(repo => 
+          repo.branches?.find(b => b.branch === selectedBranch)?.totalCommits || 0
         ),
-        backgroundColor: "rgba(99, 179, 237, 0.6)",
-        borderColor: "#63b3ed",
+        backgroundColor: 'rgba(59, 130, 246, 0.6)',
+        borderColor: 'rgb(59, 130, 246)',
         borderWidth: 1,
+        yAxisID: 'y',
       },
       {
-        type: "line",
-        label: "Pull Requests",
-        data: repositories.map((repo) => repo.pullRequests || 0),
-        borderColor: "#9f7aea",
-        backgroundColor: "rgba(159, 122, 234, 0.2)",
+        type: 'line',
+        label: 'Pull Requests',
+        data: repositories.map(repo => repo.pullRequests || 0),
+        borderColor: 'rgb(236, 72, 153)',
+        backgroundColor: 'rgba(236, 72, 153, 0.5)',
         borderWidth: 2,
-        pointBackgroundColor: "#9f7aea",
+        pointRadius: 4,
+        yAxisID: 'y1',
+      },
+      {
+        type: 'line',
+        label: 'Stars',
+        data: repositories.map(repo => repo.stars || 0),
+        borderColor: 'rgb(250, 204, 21)',
+        backgroundColor: 'rgba(250, 204, 21, 0.5)',
+        borderWidth: 2,
+        pointRadius: 4,
+        yAxisID: 'y1',
       },
     ],
-  };
+  }), [repositories, selectedBranch]);
 
-  const options = {
+  const chartOptions = {
     responsive: true,
     maintainAspectRatio: false,
-    onClick: (e, elements) => {
-      if (elements.length > 0) {
-        const repoIndex = elements[0].index;
-        setSelectedRepo(repositories[repoIndex]);
-        setShowDetails(true);
-      }
+    interaction: {
+      mode: 'index',
+      intersect: false,
     },
+    stacked: false,
     plugins: {
-      legend: {
-        position: "top",
-        labels: { color: "#fff" },
-      },
       title: {
         display: true,
-        text: "Repository Progress Overview",
-        color: "#fff",
-        font: { size: 20 },
+        text: 'Repository Progress Overview',
+        color: '#fff',
+        font: { size: 24, weight: 'bold' },
         padding: { top: 20, bottom: 20 },
+      },
+      legend: {
+        position: 'top',
+        labels: { color: '#fff', usePointStyle: true, font: { size: 14 } },
       },
       tooltip: {
         callbacks: {
-          label: (context) => {
-            const label = context.dataset.label || '';
-            const value = context.parsed.y;
-            return `${label}: ${value}`;
-          },
           afterBody: (tooltipItems) => {
-            const repoIndex = tooltipItems[0].dataIndex;
-            const repo = repositories[repoIndex];
+            const repo = repositories[tooltipItems[0].dataIndex];
             return [
               `Latest commit: ${repo.latestCommit || 'N/A'}`,
               `Open issues: ${repo.openIssues || 0}`,
-              `Stars: ${repo.stars || 0}`,
             ];
           },
         },
       },
     },
     scales: {
-      x: { ticks: { color: "#fff" }, grid: { display: false } },
-      y: { ticks: { color: "#fff" }, grid: { color: "rgba(255, 255, 255, 0.1)" } },
+      x: { 
+        ticks: { color: '#fff', font: { size: 12 } },
+        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+      },
+      y: {
+        type: 'linear',
+        display: true,
+        position: 'left',
+        ticks: { color: '#fff', font: { size: 12 } },
+        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+        title: { display: true, text: 'Commits', color: '#fff', font: { size: 14 } },
+      },
+      y1: {
+        type: 'linear',
+        display: true,
+        position: 'right',
+        ticks: { color: '#fff', font: { size: 12 } },
+        grid: { 
+          drawOnChartArea: false,
+          color: 'rgba(255, 255, 255, 0.1)',
+        },
+        title: { display: true, text: 'Pull Requests / Stars', color: '#fff', font: { size: 14 } },
+      },
+    },
+    onClick: (_, elements) => {
+      if (elements.length > 0) {
+        const repoIndex = elements[0].index;
+        setSelectedRepo(repositories[repoIndex]);
+      }
     },
   };
 
-  const renderContributions = () => {
-    const selectedBranch = selectedRepo.branches.find(b => b.branch === branch);
-    const contributions = selectedBranch?.contributionsByAuthor || {};
+  const renderRepoDetails = () => {
+    if (!selectedRepo) return null;
+
+    const selectedBranchData = selectedRepo.branches.find(b => b.branch === selectedBranch);
 
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-gray-700 p-6 rounded-lg shadow-xl mt-6"
+        className="mt-8 p-6 bg-gray-800 rounded-lg shadow-xl"
       >
-        <Box bg="gray.700" p={6} borderRadius="lg" boxShadow="xl" mt={6} maxHeight="400px" overflowY="auto" >
-          <Heading as="h3" size="lg" color="white" mb={4}>
-            Contributions for {selectedRepo.name} ({branch} branch)
-          </Heading>
-
-          <Select
-            bg="gray.800"
-            color="white"
-            value={branch}
-            onChange={(e) => setBranch(e.target.value)}
-            mb={4}
-          >
-            {selectedRepo.branches.map(({ branch }) => (
-              <option key={branch} value={branch}>{branch}</option>
-            ))}
-          </Select>
-
-          <VStack spacing={4} align="stretch">
-            {Object.entries(contributions).map(([member, commitCount]) => (
-              <Flex key={member} justify="space-between" align="center" bg="gray.600" p={3} borderRadius="md">
-                <Text color="white" fontWeight="bold">{member}</Text>
-                <HStack>
-                  <Badge colorScheme="blue">{commitCount} commits</Badge>
-                  <Stat>
-                    <StatNumber color="white">{((commitCount / selectedBranch.totalCommits) * 100).toFixed(1)}%</StatNumber>
-                    <StatHelpText color="gray.300">
-                      <StatArrow type="increase" />
-                      of total commits
-                    </StatHelpText>
-                  </Stat>
-                </HStack>
-              </Flex>
-            ))}
-          </VStack>
-          <Button mt={6} colorScheme="blue" onClick={() => setShowDetails(false)}>
-            Back to Chart
-          </Button>
-        </Box>
+        <h3 className="text-2xl font-bold text-white mb-4">{selectedRepo.name} Details</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-gray-700 p-4 rounded-lg">
+            <div className="flex items-center mb-2">
+              <GitBranch className="mr-2 text-blue-400" />
+              <span className="text-white font-semibold">Branches</span>
+            </div>
+            <select
+              value={selectedBranch}
+              onChange={(e) => setSelectedBranch(e.target.value)}
+              className="w-full bg-gray-600 text-white p-2 rounded"
+            >
+              {selectedRepo.branches.map(({ branch }) => (
+                <option key={branch} value={branch}>{branch}</option>
+              ))}
+            </select>
+          </div>
+          <div className="bg-gray-700 p-4 rounded-lg">
+            <div className="flex items-center mb-2">
+              <GitPullRequest className="mr-2 text-pink-400" />
+              <span className="text-white font-semibold">Pull Requests</span>
+            </div>
+            <p className="text-2xl font-bold text-white">{selectedRepo.pullRequests}</p>
+          </div>
+          <div className="bg-gray-700 p-4 rounded-lg">
+            <div className="flex items-center mb-2">
+              <Star className="mr-2 text-yellow-400" />
+              <span className="text-white font-semibold">Stars</span>
+            </div>
+            <p className="text-2xl font-bold text-white">{selectedRepo.stars}</p>
+          </div>
+          <div className="bg-gray-700 p-4 rounded-lg">
+            <div className="flex items-center mb-2">
+              <AlertCircle className="mr-2 text-red-400" />
+              <span className="text-white font-semibold">Open Issues</span>
+            </div>
+            <p className="text-2xl font-bold text-white">{selectedRepo.openIssues}</p>
+          </div>
+        </div>
+        {selectedBranchData && (
+          <div className="mt-6">
+            <h4 className="text-xl font-semibold text-white mb-3">Top Contributors</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {Object.entries(selectedBranchData.contributionsByAuthor || {})
+                .sort(([, a], [, b]) => b - a)
+                .slice(0, 6)
+                .map(([author, commits]) => (
+                  <div key={author} className="bg-gray-700 p-4 rounded-lg">
+                    <p className="text-white font-semibold">{author}</p>
+                    <p className="text-lg text-blue-400">{commits} commits</p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        )}
       </motion.div>
     );
   };
 
   return (
-    <Box
-      width="100%"
-      height="600px"
-      p={6}
-      borderRadius="xl"
-      boxShadow="0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(255, 255, 255, 0.1)"
-      position="relative"
-      overflow="hidden"
-      _before={{
-        content: '""',
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: "rgba(26, 32, 44, 0.7)",
-        backdropFilter: "blur(70px)",
-        zIndex: -1,
-      }}
-      className="border-2 border-gray-600 shadow-[75_20px_30px_rgba(75,_112,_184,_0.7)] "
-     >
-      <Heading as="h2" size="xl" color="white" mb={6} textAlign="center">
-        Team Progress: Commits & Contributions
-      </Heading>
-      {showDetails ? (
-        renderContributions()
-      ) : (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Bar data={data} options={options} />
-        </motion.div>
-      )}
-    </Box>
+    <div className="flex min-w-full justify-center items-center min-h-screen bg-gray-900 p-4">
+      <div className="w-full">
+        <div className="min-w-full p-6 bg-gray-800 rounded-xl shadow-2xl">
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Repository Analytics Dashboard</h2>
+          <div className=" min-w-[80vh] h-[60vh] mb-8">
+            <Bar data={chartData} options={chartOptions} />
+          </div>
+          {renderRepoDetails()}
+        </div>
+      </div>
+    </div>
   );
 };
 
