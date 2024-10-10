@@ -1,0 +1,37 @@
+# Base image for production
+FROM node:18-alpine
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Copy package files for production
+COPY package*.json ./ 
+
+# Install only production dependencies
+RUN npm install --only=production
+
+# Copy the application code
+COPY . .
+
+# Expose necessary ports
+EXPOSE 3000 10000
+
+# Start the application in production mode
+CMD ["node", "v1.js"]
+
+
+# # Build the production image
+# docker build -f Dockerfile.prod -t contribution-tracker-prod .
+
+# # Run the production container
+# docker run -it \
+#   -p 3000:3000 \
+#   -p 10000:10000 \
+#   --env-file .env \
+#   --name contribution-tracker-prod \
+#   contribution-tracker-prod
+
+
+
+# # Push the production image
+# docker push zephop/contribution-tracker:prod
