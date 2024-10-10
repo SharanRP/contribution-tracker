@@ -1,0 +1,44 @@
+# Ignore version control system directories
+.git
+.gitignore
+
+# Ignore node modules
+node_modules
+
+# Ignore npm debug logs
+npm-debug.log*
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore editor directories and files
+.vscode
+.idea
+*.swp
+*.swo
+
+# Ignore test coverage output
+coverage
+
+# Ignore build output
+build
+dist
+
+# Ignore Docker specific files
+Dockerfile
+.dockerignore
+
+# Ignore GitHub Actions workflow files
+.github
+
+# Ignore documentation files
+*.md
+LICENSE
+
+# Ignore any log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
