@@ -25,3 +25,7 @@ yarn-error.log*
 Backend/node_modules
 
 **.github
+
+# lock files
+package-lock.json
+yarn.lock
