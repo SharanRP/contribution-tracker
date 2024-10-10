@@ -2,6 +2,7 @@ import { Client, GatewayIntentBits } from 'discord.js';
 import dotenv from 'dotenv';
 import { Octokit } from '@octokit/rest';
 import fs from 'fs';
+import express from 'express';
 
 dotenv.config();
 
@@ -121,70 +122,14 @@ client.on("messageCreate", async (message) => {
 client.login(process.env.DISCORD_TOKEN);
 console.log('Discord bot logged in');
 
-// To host this bot for free and enable continuous deployment without using Heroku:
-// 1. Push your code to a GitHub repository
-// 2. Sign up for a free account on Replit (https://replit.com/)
-// 3. Create a new Repl and import your GitHub repository
-// 4. Set up environment variables in Replit (Secrets tab):
-//    - DISCORD_TOKEN
-//    - GITHUB_TOKEN
-// 5. Install the required packages using the Replit package manager
-// 6. Set up a free UptimeRobot account (https://uptimerobot.com/) to ping your Replit URL and keep it running
-// 7. In your Replit, create a new file called `keep_alive.js` with the following content:
+// Create a simple Express server to show that the bot is running
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-/*
-const express = require('express');
-const server = express();
-
-server.all('/', (req, res) => {
-    res.send('Bot is running!');
+app.get('/', (req, res) => {
+    res.send('Discord bot is running!');
 });
 
-function keepAlive() {
-    server.listen(3000, () => {
-        console.log('Server is ready.');
-    });
-}
-
-module.exports = keepAlive;
-*/
-
-// 8. Import and use the `keepAlive` function in your main bot file:
-
-/*
-const keepAlive = require('./keep_alive');
-keepAlive();
-*/
-
-// 9. Set up a GitHub Actions workflow for continuous deployment:
-// Create a file `.github/workflows/deploy.yml` with the following content:
-
-/*
-name: Deploy to Replit
-on:
-  push:
-    branches:
-      - main
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - name: Update Replit
-        env:
-          REPLIT_USERNAME: ${{ secrets.REPLIT_USERNAME }}
-          REPLIT_APP_NAME: ${{ secrets.REPLIT_APP_NAME }}
-          REPLIT_TOKEN: ${{ secrets.REPLIT_TOKEN }}
-        run: |
-          npm install -g @replit/replit-cli
-          replit login --token $REPLIT_TOKEN
-          replit deploy $REPLIT_USERNAME/$REPLIT_APP_NAME
-*/
-
-// 10. Set up the necessary secrets in your GitHub repository settings
-
-// Now, whenever you push changes to your GitHub repository,
-// the GitHub Actions workflow will automatically deploy the updated code to Replit.
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
