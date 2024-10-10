@@ -1,28 +1,39 @@
-# Use the official Node.js image
-FROM node:18
+# Dockerfile for Development with Hot Reload
+FROM node:18-alpine AS dev
 
-# Set the working directory
 WORKDIR /usr/src/app
 
-# Copy package.json and install dependencies
-COPY package.json ./
-RUN npm install
+COPY package*.json ./
 
-# Copy the rest of your application
+RUN npm install
+RUN npm install -g nodemon
+
 COPY . .
 
-# Expose the ports your bot listens to
 EXPOSE 3000 10000
 
-# # Set environment variables
-# ENV DISCORD_TOKEN=${DISCORD_TOKEN}
-# ENV GITHUB_TOKEN=${GITHUB_TOKEN}
+# Use nodemon for hot reloading
+CMD ["nodemon", "--watch", ".", "--ext", "js,json", "v1.js"]
 
-# Command to run the bot
-CMD ["node", "v1.js"]
+# Docker build command for development:
+# docker build --target dev -t discord-bot-dev .
 
-# Docker build command:
-# docker build -t discord-bot .
+# Docker run command for development with hot reload:
+# docker run -it \
+#   -p 3000:3000 \
+#   -p 10000:10000 \
+#   --env-file .env \
+#   --name discord-bot-dev \
+#   --mount type=bind,source=$(pwd),target=/usr/src/app \
+#   discord-bot-dev
 
-# Docker run command:
-# docker run -d -p 3000:3000 -p 10000:10000 --env-file .env --name discord-bot-container discord-bot
+# This command mounts the current directory inside the container and uses nodemon.
+# Any changes made to the code will trigger an automatic restart of the application.
+
+# .dockerignore example:
+# ----------------------
+# node_modules
+# npm-debug.log
+# Dockerfile*
+# .dockerignore
+# .env
