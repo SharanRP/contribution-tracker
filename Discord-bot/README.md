@@ -87,21 +87,32 @@ A cron job runs every 15 minutes to update the cache. It follows these rules:
 ### Express Server
 A simple Express server runs on the specified port (default: 10000) and provides a health check endpoint at the root URL (`/`).
 
+
 ## Docker Configuration
 
-This project includes a Dockerfile for development with hot reloading. Below are the key commands and explanations for building and running the Docker image.
+This project includes a Dockerfile for both development with hot reloading and production. Below are the key commands and explanations for building and running the Docker images.
 
-### Building the Docker Image
+### Building the Docker Images
 
 To build the Docker image for development, use the following command:
+
 ```bash
 # Build the Docker image for development
-docker build --target dev -t discord-bot-dev .
+docker build --target dev -t zephop/discord-bot:dev .
 ```
 
-### Running the Docker Container
+To build the Docker image for production, use the following command:
 
-To run the Docker container with hot reloading, use the command below:
+```bash
+# Build the Docker image for production
+docker build --target prod -t zephop/discord-bot:prod .
+```
+
+### Running the Docker Containers
+
+#### Running the Development Container
+
+To run the Docker container with hot reloading for development, use the command below:
 
 ```bash
 # Run the Docker container with hot reloading
@@ -111,10 +122,26 @@ docker run -it \
   --env-file .env \
   --name discord-bot-dev \
   --mount type=bind,source=$(pwd),target=/usr/src/app \
-  discord-bot-dev
+  zephop/discord-bot:dev
 ```
 
 This command mounts the current directory inside the container and utilizes `nodemon`. Any changes made to the code will automatically trigger a restart of the application.
+
+#### Running the Production Container
+
+To run the Docker container for production, use the command below:
+
+```bash
+# Run the Docker container for production
+docker run -it \
+  -p 3000:3000 \
+  -p 10000:10000 \
+  --env-file .env \
+  --name discord-bot-prod \
+  zephop/discord-bot:prod
+```
+
+This command runs the production-ready application without hot reloading.
 
 ### `.dockerignore` Example
 
@@ -126,7 +153,4 @@ node_modules
 npm-debug.log
 Dockerfile*
 .dockerignore
-```
-
-This will prevent unnecessary files from being included in your Docker image.
 ```
