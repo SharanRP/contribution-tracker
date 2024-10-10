@@ -15,8 +15,8 @@ import {
   Avatar,
   Tooltip,
   Button,
-  AvatarGroup,  
-  usePrefersReducedMotion,
+  AvatarGroup,
+  // usePrefersReducedMotion,
 } from "@chakra-ui/react";
 import { FaStar, FaCodeBranch, FaCode } from "react-icons/fa";
 import { MdAccessTime, MdDateRange, MdOpenInNew } from "react-icons/md";
@@ -28,7 +28,7 @@ const MotionFlex = motion(Flex);
 const Leaderboard = ({ repositories }) => {
   const [timePeriod, setTimePeriod] = useState("all-time");
   const [sortBy, setSortBy] = useState("commits");
-  const prefersReducedMotion = usePrefersReducedMotion();
+  // const prefersReducedMotion = usePrefersReducedMotion();
 
   const getFilteredRepositories = () => {
     if (timePeriod === "weekly") {
@@ -151,10 +151,10 @@ const Leaderboard = ({ repositories }) => {
             borderColor="gray.600"
             _hover={{ borderColor: "gray.500" }}
             sx={{
-              '& option': {
+              "& option": {
                 backgroundColor: "rgba(26, 32, 44, 0.7)",
-                color: "white"
-              }
+                color: "white",
+              },
             }}
           >
             <option value="commits">Sort by Commits</option>
@@ -247,31 +247,56 @@ const Leaderboard = ({ repositories }) => {
                     </HStack>
                   </Flex>
 
-                  <Text color="gray.400" fontSize="lg" mb={4} fontWeight="medium">
+                  <Text
+                    color="gray.400"
+                    fontSize="lg"
+                    mb={4}
+                    fontWeight="medium"
+                  >
                     Top Contributors:{" "}
                     {repo.contributors && repo.contributors.length
-                      ? repo.contributors.map((contributor) => contributor.name).join(", ")
+                      ? repo.contributors
+                          .map((contributor) => contributor.name)
+                          .join(", ")
                       : "No contributors available"}
                   </Text>
 
                   <HStack spacing={6} wrap="wrap">
-                    {(repo.contributors || []).slice(0, 3).map((contributor, idx) => (
-                      <Tooltip key={idx} label={`${contributor.commits} commits`} hasArrow placement="top">
-                        <MotionBox
-                          as={HStack}
-                          bg="gray.700"
-                          p={2}
-                          borderRadius="full"
-                          whilehover={{ scale: 1.05, backgroundColor: "gray.600" }}
-                          transition={{ duration: 0.2 }}
+                    {(repo.contributors || [])
+                      .slice(0, 3)
+                      .map((contributor, idx) => (
+                        <Tooltip
+                          key={idx}
+                          label={`${contributor.commits} commits`}
+                          hasArrow
+                          placement="top"
                         >
-                          <Avatar size="md" name={contributor.name} src={contributor.avatar} />
-                          <Text color="white" fontWeight="medium" fontSize="md">
-                            {contributor.name}
-                          </Text>
-                        </MotionBox>
-                      </Tooltip>
-                    ))}
+                          <MotionBox
+                            as={HStack}
+                            bg="gray.700"
+                            p={2}
+                            borderRadius="full"
+                            whilehover={{
+                              scale: 1.05,
+                              backgroundColor: "gray.600",
+                            }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            <Avatar
+                              size="md"
+                              name={contributor.name}
+                              src={contributor.avatar}
+                            />
+                            <Text
+                              color="white"
+                              fontWeight="medium"
+                              fontSize="md"
+                            >
+                              {contributor.name}
+                            </Text>
+                          </MotionBox>
+                        </Tooltip>
+                      ))}
                   </HStack>
 
                   <Flex justify="space-between" align="center">

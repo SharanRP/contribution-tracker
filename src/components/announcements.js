@@ -1,11 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { Box, Button, Heading, VStack, Text, useToast, HStack, Switch, Grid } from "@chakra-ui/react";
-import MDEditor from '@uiw/react-md-editor';
-import ReactMarkdown from 'react-markdown';
-import axios from 'axios';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  Box,
+  Button,
+  Heading,
+  VStack,
+  Text,
+  useToast,
+  HStack,
+  Switch,
+  Grid,
+} from "@chakra-ui/react";
+import MDEditor from "@uiw/react-md-editor";
+import ReactMarkdown from "react-markdown";
+import axios from "axios";
+import { motion } from "framer-motion";
 
-const API_URL = 'http://localhost:5000';
+const API_URL = "http://localhost:5000";
 
 const Announcements = ({ isAdmin }) => {
   const [announcements, setAnnouncements] = useState([]);
@@ -13,16 +23,12 @@ const Announcements = ({ isAdmin }) => {
   const [previewMode, setPreviewMode] = useState(false);
   const toast = useToast();
 
-  useEffect(() => {
-    fetchAnnouncements();
-  }, []);
-
-  const fetchAnnouncements = async () => {
+  const fetchAnnouncements = useCallback(async () => {
     try {
       const response = await axios.get(`${API_URL}/api/announcements`);
       setAnnouncements(response.data);
     } catch (error) {
-      console.error('Error fetching announcements:', error);
+      console.error("Error fetching announcements:", error);
       toast({
         title: "Error fetching announcements",
         description: error.message,
@@ -31,19 +37,24 @@ const Announcements = ({ isAdmin }) => {
         isClosable: true,
       });
     }
-  };
+  }, [toast]);
+
+  useEffect(() => {
+    fetchAnnouncements();
+  }, [fetchAnnouncements]);
 
   const handleSendAnnouncement = async () => {
     if (draft) {
       try {
-        const token = localStorage.getItem('token'); 
-        await axios.post(`${API_URL}/api/announcements`, 
+        const token = localStorage.getItem("token");
+        await axios.post(
+          `${API_URL}/api/announcements`,
           { content: draft },
           {
             headers: {
-              'Authorization': `Bearer ${token}`,
-              'Content-Type': 'application/json'
-            }
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
           }
         );
         setDraft("");
@@ -55,7 +66,7 @@ const Announcements = ({ isAdmin }) => {
           isClosable: true,
         });
       } catch (error) {
-        console.error('Error posting announcement:', error);
+        console.error("Error posting announcement:", error);
         toast({
           title: "Error posting announcement",
           description: error.response?.data?.error || error.message,
@@ -70,12 +81,16 @@ const Announcements = ({ isAdmin }) => {
   // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   const scaleUp = {
     hidden: { scale: 0.9 },
-    visible: { scale: 1, transition: { duration: 0.3, ease: 'easeOut' } },
+    visible: { scale: 1, transition: { duration: 0.3, ease: "easeOut" } },
   };
 
   return (
@@ -118,9 +133,18 @@ const Announcements = ({ isAdmin }) => {
 
         {isAdmin && (
           <motion.div variants={scaleUp}>
-            <Box mb={8} p={6} bg="gray.700" borderRadius="lg" boxShadow="lg" transition="all 0.3s">
+            <Box
+              mb={8}
+              p={6}
+              bg="gray.700"
+              borderRadius="lg"
+              boxShadow="lg"
+              transition="all 0.3s"
+            >
               <HStack justify="space-between" align="center" mb={4}>
-                <Text fontSize="lg" color="gray.400">Create Announcement</Text>
+                <Text fontSize="lg" color="gray.400">
+                  Create Announcement
+                </Text>
                 <HStack>
                   <Text>Preview Mode</Text>
                   <Switch
@@ -146,7 +170,9 @@ const Announcements = ({ isAdmin }) => {
                 {/* Preview on the right, visible only if preview mode is enabled */}
                 {previewMode && (
                   <Box p={4} bg="gray.600" borderRadius="md" overflowY="auto">
-                    <ReactMarkdown>{draft || "_Nothing to preview_"}</ReactMarkdown>
+                    <ReactMarkdown>
+                      {draft || "_Nothing to preview_"}
+                    </ReactMarkdown>
                   </Box>
                 )}
               </Grid>
@@ -168,7 +194,12 @@ const Announcements = ({ isAdmin }) => {
 
         <VStack spacing={6} align="stretch" width="100%">
           {announcements.map((announcement) => (
-            <motion.div key={announcement.id} initial="hidden" animate="visible" variants={scaleUp}>
+            <motion.div
+              key={announcement.id}
+              initial="hidden"
+              animate="visible"
+              variants={scaleUp}
+            >
               <Box
                 bg="gray.800"
                 p={6}
