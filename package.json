@@ -29,11 +29,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "yarn react-scripts start",
-    "build": "yarn react-scripts build",
-    "test": "yarn react-scripts test",
-    "eject": "yarn react-scripts eject",
-    "deploy": "yarn install && yarn build"
+    "start": "npm run react-scripts start",
+    "build": "npm run react-scripts build",
+    "test": "npm run react-scripts test",
+    "eject": "npm run react-scripts eject",
+    "deploy": "npm install && npm run build"
   },
   "eslintConfig": {
     "extends": [
