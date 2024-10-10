@@ -90,6 +90,19 @@ async function getInactiveRepos() {
     return inactiveRepos;
 }
 
+async function getTeamContributions() {
+    console.log('Fetching team contributions');
+    const teamContributions = [];
+    for (const { owner, repo } of repos) {
+        const commits = await getWeeklyCommits(owner, repo);
+        teamContributions.push({
+            repo: `${owner}/${repo}`,
+            commitCount: commits.length
+        });
+    }
+    return teamContributions.sort((a, b) => b.commitCount - a.commitCount);
+}
+
 client.on("messageCreate", async (message) => {
     console.log(`Received message: ${message.content}`);
     if (message.content === "!inactive") {
@@ -124,6 +137,15 @@ client.on("messageCreate", async (message) => {
             console.log(`Sending response: ${response}`);
             message.channel.send(response);
         }
+        console.log('Response sent to Discord channel');
+    } else if (message.content === "!leaderteams") {
+        console.log('Received !leaderteams command');
+        const teamContributions = await getTeamContributions();
+        const topTeams = teamContributions.slice(0, 5);
+        const response = "Top 5 most active teams in the last week:\n" +
+            topTeams.map((team, index) => `${index + 1}. ${team.repo}: ${team.commitCount} commits`).join("\n");
+        console.log(`Sending response: ${response}`);
+        message.channel.send(response);
         console.log('Response sent to Discord channel');
     }
 });
