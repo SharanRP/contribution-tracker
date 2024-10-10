@@ -1,0 +1,42 @@
+# Base image for development
+FROM node:18-alpine
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Copy package files
+COPY package*.json ./ 
+
+# Install dependencies
+RUN npm install
+RUN npm install -g nodemon
+
+# Copy the application code
+COPY . .
+
+# Expose necessary ports
+EXPOSE 3000 10000
+
+# Use nodemon for hot reloading during development
+CMD ["nodemon", "--watch", ".", "--ext", "js,json", "v1.js"]
+
+
+# # Build the development image
+# docker build -f Dockerfile.dev -t contribution-tracker-dev .
+
+# # Run the development container
+# docker run -it \
+#   -p 3000:3000 \
+#   -p 10000:10000 \
+#   --env-file .env \
+#   --name contribution-tracker-dev \
+#   --mount type=bind,source=$(pwd),target=/usr/src/app \
+#   contribution-tracker-dev
+
+
+
+# # Login to Docker Hub
+# docker login
+
+# # Push the development image
+# docker push zephop/contribution-tracker:dev

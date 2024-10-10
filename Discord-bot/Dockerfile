@@ -44,31 +44,31 @@ CMD ["node", "v1.js"]
 
 # -----------------------------------------------
 # Docker build command for development:
-# docker build --target dev -t discord-bot-dev .
+# docker build --target dev -t contribution-tracker-dev .
 
 # Docker run command for development with hot reload:
 # docker run -it \
 #   -p 3000:3000 \
 #   -p 10000:10000 \
 #   --env-file .env \
-#   --name discord-bot-dev \
+#   --name contribution-tracker-dev \
 #   --mount type=bind,source=$(pwd),target=/usr/src/app \
-#   discord-bot-dev
+#   contribution-tracker-dev
 
 # This command mounts the current directory inside the container and uses nodemon.
 # Any changes made to the code will trigger an automatic restart of the application.
 
 # -----------------------------------------------
 # Docker build command for production:
-# docker build --target prod -t discord-bot-prod .
+# docker build --target prod -t contribution-tracker-prod .
 
 # Docker run command for production:
 # docker run -it \
 #   -p 3000:3000 \
 #   -p 10000:10000 \
 #   --env-file .env \
-#   --name discord-bot-prod \
-#   discord-bot-prod
+#   --name contribution-tracker-prod \
+#   contribution-tracker-prod
 
 # -----------------------------------------------
 # .dockerignore example:
@@ -86,13 +86,13 @@ CMD ["node", "v1.js"]
 # docker login
 
 # # Build images
-# docker build --target dev -t zephop/discord-bot:dev .
-# docker build --target prod -t zephop/discord-bot:prod .
+# docker build --target dev -t zephop/contribution-tracker:dev .
+# docker build --target prod -t zephop/contribution-tracker:prod .
 
 # # Verify images
 # docker images
 
 # # Push images to Docker Hub
-# docker push zephop/discord-bot:dev
-# docker push zephop/discord-bot:prod
+# docker push zephop/contribution-tracker:dev
+# docker push zephop/contribution-tracker:prod
 
