@@ -91,6 +91,7 @@ async function getInactiveRepos() {
 }
 
 client.on("messageCreate", async (message) => {
+    console.log(`Received message: ${message.content}`);
     if (message.content === "!inactive") {
         console.log('Received !inactive command');
         let inactiveUsers = [];
@@ -102,18 +103,26 @@ client.on("messageCreate", async (message) => {
         const uniqueInactiveUsers = [...new Set(inactiveUsers)];
         console.log('Unique inactive users:', uniqueInactiveUsers);
         if (uniqueInactiveUsers.length > 0) {
-            message.channel.send(`Inactive members in the last week: ${uniqueInactiveUsers.join(", ")}`);
+            const response = `Inactive members in the last week: ${uniqueInactiveUsers.join(", ")}`;
+            console.log(`Sending response: ${response}`);
+            message.channel.send(response);
         } else {
-            message.channel.send("All members have been active in the last week.");
+            const response = "All members have been active in the last week.";
+            console.log(`Sending response: ${response}`);
+            message.channel.send(response);
         }
         console.log('Response sent to Discord channel');
     } else if (message.content === "!inactive-teams") {
         console.log('Received !inactive-teams command');
         const inactiveRepos = await getInactiveRepos();
         if (inactiveRepos.length > 0) {
-            message.channel.send(`Repositories with no commits in the last week: ${inactiveRepos.join(", ")}`);
+            const response = `Repositories with no commits in the last week: ${inactiveRepos.join(", ")}`;
+            console.log(`Sending response: ${response}`);
+            message.channel.send(response);
         } else {
-            message.channel.send("All repositories have had activity in the last week.");
+            const response = "All repositories have had activity in the last week.";
+            console.log(`Sending response: ${response}`);
+            message.channel.send(response);
         }
         console.log('Response sent to Discord channel');
     }
@@ -127,6 +136,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
+    console.log('Received request to root endpoint');
     res.send('Discord bot is running!');
 });
 
