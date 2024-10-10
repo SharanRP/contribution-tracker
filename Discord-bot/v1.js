@@ -133,13 +133,13 @@ console.log('Discord bot logged in');
 
 // Create a simple Express server to show that the bot is running
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;  // Use the PORT environment variable
 
 app.get('/', (req, res) => {
     console.log('Received request to root endpoint');
-    res.send('Discord bot is running!');
+    res.send('Service is active');
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on port ${PORT}`);
 });
