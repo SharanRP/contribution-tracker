@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 // import { Box, VStack, Spinner, Text, Container, useColorMode, Button, Grid, GridItem } from "@chakra-ui/react";
 import { Box, VStack, Container } from "@chakra-ui/react";
 import axios from "axios";
@@ -26,13 +31,13 @@ const App = () => {
   const [error, setError] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
 
-  const repoUrls = [
-    "https://github.com/TanayGada/BlocTick",
-    "https://github.com/NiranjanMore10/EventMint",
-    "https://github.com/adiawaskar/FreelanceHub",
-    "https://github.com/SharanRP/contribution-tracker",
-    // Add more repo URLs here
-  ];
+  // const repoUrls = [
+  //   "https://github.com/TanayGada/BlocTick",
+  //   "https://github.com/NiranjanMore10/EventMint",
+  //   "https://github.com/adiawaskar/FreelanceHub",
+  //   "https://github.com/SharanRP/contribution-tracker",
+  //   // Add more repo URLs here
+  // ];
 
   // useEffect(() => {
   //   const fetchAllRepoProgress = async () => {
@@ -131,10 +136,6 @@ const App = () => {
   //   }
   // }, [startDate, endDate]);
 
-
-
-
-  
   useEffect(() => {
     const fetchAllRepoProgress = async () => {
       if (!startDate || !endDate) return;
@@ -143,14 +144,17 @@ const App = () => {
       setError(null);
 
       try {
-        const response = await axios.post('http://localhost:5000/api/repo-progress', {
-          startDate,
-          endDate
-        });
+        const response = await axios.post(
+          "http://localhost:5000/api/repo-progress",
+          {
+            startDate,
+            endDate,
+          }
+        );
         // console.log(response.data.repositories);
         setRepositories(response.data.repositories);
       } catch (error) {
-        console.error('Error fetching repository data:', error);
+        console.error("Error fetching repository data:", error);
         setError("Failed to fetch repository data.");
       } finally {
         setLoading(false);
@@ -160,10 +164,9 @@ const App = () => {
     fetchAllRepoProgress();
   }, [startDate, endDate]);
 
-
   const handleLogout = () => {
-    localStorage.removeItem('adminToken');
-    delete axios.defaults.headers.common['Authorization'];
+    localStorage.removeItem("adminToken");
+    delete axios.defaults.headers.common["Authorization"];
     setIsAdmin(false);
   };
 
@@ -186,7 +189,10 @@ const App = () => {
         <Container maxW="container.4xl" py={8}>
           <VStack spacing={6} align="stretch">
             <Routes>
-              <Route path="/login" element={<Login setIsAdmin={setIsAdmin} />} />
+              <Route
+                path="/login"
+                element={<Login setIsAdmin={setIsAdmin} />}
+              />
               <Route
                 path="/admin"
                 element={
@@ -199,22 +205,26 @@ const App = () => {
               />
               <Route
                 path="/"
-                element={<HomePage
-                  repositories={repositories}
-                  startDate={startDate}
-                  endDate={endDate}
-                  setStartDate={setStartDate}
-                  setEndDate={setEndDate}
-                  loading={loading}
-                  error={error}
-                />}
+                element={
+                  <HomePage
+                    repositories={repositories}
+                    startDate={startDate}
+                    endDate={endDate}
+                    setStartDate={setStartDate}
+                    setEndDate={setEndDate}
+                    loading={loading}
+                    error={error}
+                  />
+                }
               />
-              <Route path="/posts" element={<Announcements isAdmin={false} />} />
+              <Route
+                path="/posts"
+                element={<Announcements isAdmin={false} />}
+              />
             </Routes>
           </VStack>
         </Container>
       </Box>
-
     </Router>
   );
 };
