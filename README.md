@@ -43,8 +43,8 @@ To start the development server:
 ## TODOs
 
 - [ ] Track Contributions of around 60 repositories in each of their branches
-- [ ] Identify Repos which have no commits in current week
-- [ ] Identify members who dont have commits in current week
-- [ ] For points 2 and 3 implement a bot
-- [ ] Also Create a discord bot to display these members names
+- [X] Identify Repos which have no commits in current week
+- [X] Identify members who dont have commits in current week
+- [X] For points 2 and 3 implement a bot
+- [X] Also Create a discord bot to display these members names
 - [ ] Store their discord usernames in a db to send notifications to them
