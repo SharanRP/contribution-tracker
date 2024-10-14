@@ -1,14 +1,32 @@
 import express from 'express';
 import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 export function startServer() {
     const app = express();
     const PORT = process.env.PORT || 10000;
 
+    // Get the directory name of the current module
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+
     // Function to get the last deployed commit and its timestamp
     function getLastDeployedCommit() {
         try {
+            // Try to read the last commit from a file
+            const commitFilePath = path.join(__dirname, 'last_commit.txt');
+            if (fs.existsSync(commitFilePath)) {
+                return fs.readFileSync(commitFilePath, 'utf8').trim();
+            }
+
+            // If file doesn't exist, try git log command
             const gitLog = execSync('git log -1 --format="%h - %s (%cd)"').toString().trim();
+            
+            // Save the result to the file for future use
+            fs.writeFileSync(commitFilePath, gitLog);
+
             return gitLog;
         } catch (error) {
             console.error('Error getting last commit:', error);
