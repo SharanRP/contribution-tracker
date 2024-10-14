@@ -18,7 +18,7 @@ COPY . .
 EXPOSE 3000 10000
 
 # Use nodemon for hot reloading during development
-CMD ["nodemon", "--watch", ".", "--ext", "js,json", "v1.js"]
+CMD ["nodemon", "--watch", "v1", "--ext", "js,json", "v1/index.js"]
 
 # -----------------------------------------------
 # Production Stage
@@ -40,7 +40,7 @@ COPY . .
 EXPOSE 3000 10000
 
 # Start the application in production mode
-CMD ["node", "v1.js"]
+CMD ["node", "v1/index.js"]
 
 # -----------------------------------------------
 # Docker build command for development:
@@ -95,4 +95,3 @@ CMD ["node", "v1.js"]
 # # Push images to Docker Hub
 # docker push zephop/contribution-tracker:dev
 # docker push zephop/contribution-tracker:prod
-
