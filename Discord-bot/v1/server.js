@@ -1,12 +1,25 @@
 import express from 'express';
+import { execSync } from 'child_process';
 
 export function startServer() {
     const app = express();
     const PORT = process.env.PORT || 10000;
 
+    // Function to get the last deployed commit and its timestamp
+    function getLastDeployedCommit() {
+        try {
+            const gitLog = execSync('git log -1 --format="%h - %s (%cd)"').toString().trim();
+            return gitLog;
+        } catch (error) {
+            console.error('Error getting last commit:', error);
+            return 'Unable to retrieve last commit';
+        }
+    }
+
     app.get('/', (req, res) => {
         try {
             console.log('Received request to root endpoint');
+            const lastCommit = getLastDeployedCommit();
             res.status(200).send(`
                 <!DOCTYPE html>
                 <html lang="en">
@@ -15,7 +28,62 @@ export function startServer() {
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <title>GitHub Analytics Discord Bot</title>
                     <style>
-                        /* CSS styles here */
+                        body {
+                            font-family: Arial, sans-serif;
+                            line-height: 1.6;
+                            color: #333;
+                            margin: 0;
+                            padding: 20px;
+                            background-color: #f4f4f4;
+                        }
+                        .container {
+                            background-color: #fff;
+                            border-radius: 5px;
+                            padding: 20px;
+                            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                            max-width: 800px;
+                            margin: 0 auto;
+                            width: 90%;
+                        }
+                        h1 {
+                            color: #2c3e50;
+                            border-bottom: 2px solid #3498db;
+                            padding-bottom: 10px;
+                            font-size: 24px;
+                            word-wrap: break-word;
+                        }
+                        .status {
+                            display: inline-block;
+                            background-color: #2ecc71;
+                            color: white;
+                            padding: 5px 10px;
+                            border-radius: 3px;
+                            font-weight: bold;
+                        }
+                        .timestamp {
+                            color: #7f8c8d;
+                            font-style: italic;
+                        }
+                        p {
+                            word-wrap: break-word;
+                        }
+                        @media (max-width: 600px) {
+                            body {
+                                padding: 10px;
+                            }
+                            .container {
+                                padding: 15px;
+                                width: 95%;
+                            }
+                            h1 {
+                                font-size: 20px;
+                            }
+                            .status {
+                                display: block;
+                                margin-top: 10px;
+                                text-align: center;
+                            }
+                        }
                     </style>
                 </head>
                 <body>
@@ -24,6 +92,7 @@ export function startServer() {
                         <p><strong>Status:</strong> <span class="status">Active</span></p>
                         <p><strong>Message:</strong> GitHub Analytics Discord Bot is up and running</p>
                         <p class="timestamp"><strong>Timestamp:</strong> ${new Date().toISOString()}</p>
+                        <p><strong>Last Deployed Commit:</strong> ${lastCommit}</p>
                     </div>
                 </body>
                 </html>
