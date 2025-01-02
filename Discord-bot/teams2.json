@@ -1,0 +1,1759 @@
+{
+  "teams": [
+    {
+      "teamName": "Anti-Anachrony",
+      "repoUrl": "https://github.com/ShreyaR2/CrypTick.git",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Shreya Rajeev",
+          "githubUsername": "ShreyaR2",
+          "email": "srsuri_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Niharika Hariharan",
+          "githubUsername": "niharikah005"
+        },
+        {
+          "role": "Member 2",
+          "name": "Anagha Puvathingal",
+          "githubUsername": "anaghapuv"
+        },
+        {
+          "role": "Member 3",
+          "name": "Carol Chopde",
+          "githubUsername": "CarolChopde\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/ShreyaR2/CrypTick",
+        "owner": "ShreyaR2",
+        "name": "CrypTick"
+      }
+    },
+    {
+      "teamName": "Anti-Kaleshi",
+      "repoUrl": "https://github.com/kavya-r30/Anti-Kaleshi-Inheritance",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Kavya Rambhia",
+          "githubUsername": "kavya-r30",
+          "email": "knrambhia_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Kevin Shah",
+          "githubUsername": "kevinzb56"
+        },
+        {
+          "role": "Member 2",
+          "name": "Mihir Katakdhond",
+          "githubUsername": "mihir-k64"
+        },
+        {
+          "role": "Member 3",
+          "name": "Swayam Shah",
+          "githubUsername": "sonu0305\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/kavya-r30/Anti-Kaleshi-Inheritance",
+        "owner": "kavya-r30",
+        "name": "Anti-Kaleshi-Inheritance"
+      }
+    },
+    {
+      "teamName": "Artillery Intelligence",
+      "repoUrl": "https://github.com/rishitg24/Artillery-Intelligence-AI-",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Rishit Gupta",
+          "githubUsername": "rishitg24",
+          "email": "ppshinde_b23@et.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Garv Handa",
+          "githubUsername": "coolbrickv314"
+        },
+        {
+          "role": "Member 2",
+          "name": "Pranshu Kumar",
+          "githubUsername": "Pranshu2512"
+        },
+        {
+          "role": "Member 3",
+          "name": "Pawan Shinde ",
+          "githubUsername": "pawanshinde123\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/rishitg24/Artillery-Intelligence-AI-",
+        "owner": "rishitg24",
+        "name": "Artillery-Intelligence-AI-"
+      }
+    },
+    {
+      "teamName": "assets",
+      "repoUrl": "https://github.com/meekhumor/Virtual-Interviewer",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Om Mukherjee",
+          "githubUsername": "meekhumor",
+          "email": "osmukherjee_b23@ee.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Aryan Yadav",
+          "githubUsername": "Aryan-y-77"
+        },
+        {
+          "role": "Member 2",
+          "name": "Aman Vatsa",
+          "githubUsername": "amanv13"
+        },
+        {
+          "role": "Member 3",
+          "name": "Aditya Mahajan",
+          "githubUsername": "mahajan_777\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/meekhumor/Virtual-Interviewer",
+        "owner": "meekhumor",
+        "name": "Virtual-Interviewer"
+      }
+    },
+    {
+      "teamName": "Asteroid destroyers ",
+      "repoUrl": "https://github.com/Dhanu584/HostelConnect",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Dhanashri Garande ",
+          "githubUsername": "Dhanu584",
+          "email": "dbgarande_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Aditya Nagargoje",
+          "githubUsername": "NooBAdity-N"
+        },
+        {
+          "role": "Member 2",
+          "name": "Parchi Gengje",
+          "githubUsername": "pagengje"
+        },
+        {
+          "role": "Member 3",
+          "name": "Amey Kadu",
+          "githubUsername": "XtrmVoid\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Dhanu584/HostelConnect",
+        "owner": "Dhanu584",
+        "name": "HostelConnect"
+      }
+    },
+    {
+      "teamName": "axios",
+      "repoUrl": "https://github.com/rushichavan21/axios",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Rushikesh chavan",
+          "githubUsername": "rushichavan21",
+          "email": "rschavan_b23@et.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Ranveer Arakhrao",
+          "githubUsername": "realrnvr"
+        },
+        {
+          "role": "Member 2",
+          "name": "shivkumar rajmane",
+          "githubUsername": "shivkumar-github"
+        },
+        {
+          "role": "Member 3",
+          "name": "tejas acharya",
+          "githubUsername": "tejas-a11\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/rushichavan21/axios",
+        "owner": "rushichavan21",
+        "name": "axios"
+      }
+    },
+    {
+      "teamName": "bitbats",
+      "repoUrl": "https://github.com/adchad90/BitBats",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Aditya Chavan",
+          "githubUsername": "adchad90",
+          "email": "avchavan_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Aadit Narke ",
+          "githubUsername": "1thirty-five"
+        },
+        {
+          "role": "Member 2",
+          "name": "Harish Adsul",
+          "githubUsername": "adsulharish"
+        },
+        {
+          "role": "Member 3",
+          "name": "Shrivara Bhat",
+          "githubUsername": "SOULShri\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/adchad90/BitBats",
+        "owner": "adchad90",
+        "name": "BitBats"
+      }
+    },
+    {
+      "teamName": "BitWizards",
+      "repoUrl": "https://github.com/PBSAWANT27/Inheritance-Project",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Pranjal Sawant ",
+          "githubUsername": "PBSAWANT27",
+          "email": "pbsawant_b23@et.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Tanisha sarkar ",
+          "githubUsername": "stanisha7"
+        },
+        {
+          "role": "Member 2",
+          "name": "Jessica Nayak",
+          "githubUsername": "Jess-001"
+        },
+        {
+          "role": "Member 3",
+          "name": "Vidhi Singh ",
+          "githubUsername": "vidhis607\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/PBSAWANT27/Inheritance-Project",
+        "owner": "PBSAWANT27",
+        "name": "Inheritance-Project"
+      }
+    },
+    {
+      "teamName": "cache-me-if-you-can",
+      "repoUrl": "https://github.com/shamita31/cache-me-if-you-can",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Shamita Dhamankar ",
+          "githubUsername": "shamita31",
+          "email": "spdhamankar_b23@et.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Sanika Deshmukh ",
+          "githubUsername": "Sanikad20"
+        },
+        {
+          "role": "Member 2",
+          "name": "Girija Vibhute",
+          "githubUsername": "GirijaVib04"
+        },
+        {
+          "role": "Member 3",
+          "name": "Kartik Bulusu ",
+          "githubUsername": "KartikB3\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/shamita31/cache-me-if-you-can",
+        "owner": "shamita31",
+        "name": "cache-me-if-you-can"
+      }
+    },
+    {
+      "teamName": "Capital Crusaders",
+      "repoUrl": "https://github.com/Ishaan0132/Inheritance",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Ishaan Shaikh",
+          "githubUsername": "Ishaan0132",
+          "email": "iishaikh_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Ayaansh Churi",
+          "githubUsername": "AyaanshC"
+        },
+        {
+          "role": "Member 2",
+          "name": "Abhay Varnekar",
+          "githubUsername": "Abhay-Varnekar"
+        },
+        {
+          "role": "Member 3",
+          "name": "Kaustubh Sonawane",
+          "githubUsername": "Kaustubh6077\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Ishaan0132/Inheritance",
+        "owner": "Ishaan0132",
+        "name": "Inheritance"
+      }
+    },
+    {
+      "teamName": "CerebroX",
+      "repoUrl": "https://github.com/smamodia/CerebroX",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Sarakshi Mamodia",
+          "githubUsername": "smamodia",
+          "email": "symamodia_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Esha Bidkar",
+          "githubUsername": "EshaBidkar"
+        },
+        {
+          "role": "Member 2",
+          "name": "Mahima Sonawane",
+          "githubUsername": "Mahi3454"
+        },
+        {
+          "role": "Member 3",
+          "name": "Vishal Acharya ",
+          "githubUsername": "vishalacharya09\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/smamodia/CerebroX",
+        "owner": "smamodia",
+        "name": "CerebroX"
+      }
+    },
+    {
+      "teamName": "circuit-breakers",
+      "repoUrl": "https://github.com/hmjag07/CircuitBreakers.git",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Anvisha Dekate",
+          "githubUsername": "Anvishaa",
+          "email": "avdekate_b23@el.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Harsh Jagtap",
+          "githubUsername": "hmjag07"
+        },
+        {
+          "role": "Member 2",
+          "name": "Ishika Ghole",
+          "githubUsername": "ISHIKAAMITGHOLE"
+        },
+        {
+          "role": "Member 3",
+          "name": "Saniya Sangnale",
+          "githubUsername": "SANU-2006\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/hmjag07/CircuitBreakers",
+        "owner": "hmjag07",
+        "name": "CircuitBreakers"
+      }
+    },
+    {
+      "teamName": "Clueless coders ",
+      "repoUrl": "https://github.com/tithee16/Clueless-coders-",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Tithee Upase ",
+          "githubUsername": "tithee16",
+          "email": "tvupase_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Aditya Pawar",
+          "githubUsername": "Aditya-Pawar06"
+        },
+        {
+          "role": "Member 2",
+          "name": "Harshada Kanjode",
+          "githubUsername": "harshadakhanjode"
+        },
+        {
+          "role": "Member 3",
+          "name": "Samiksha Navale ",
+          "githubUsername": "samikshanavale\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/tithee16/Clueless-coders-",
+        "owner": "tithee16",
+        "name": "Clueless-coders-"
+      }
+    },
+    {
+      "teamName": "Code breakers",
+      "repoUrl": "https://github.com/daksh-sanghvii/Local-Sports-Network",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Paanchi Nahar ",
+          "githubUsername": "PaanchiNahar",
+          "email": "psnahar_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Daksh Sanghvi",
+          "githubUsername": "daksh-sanghvii"
+        },
+        {
+          "role": "Member 2",
+          "name": "Hriday Ranawat",
+          "githubUsername": "Hridayyy1"
+        },
+        {
+          "role": "Member 3",
+          "name": "Raghunandan Patel",
+          "githubUsername": "RaghunandanPatel\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/daksh-sanghvii/Local-Sports-Network",
+        "owner": "daksh-sanghvii",
+        "name": "Local-Sports-Network"
+      }
+    },
+    {
+      "teamName": "Code Monkey",
+      "repoUrl": "https://github.com/NilanshuRanjan/Inheritence-Project",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Nilanshu Ranjan",
+          "githubUsername": "NilanshuRanjan",
+          "email": "nuranjan_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Atharva Dhage",
+          "githubUsername": "SameerSalunke12"
+        },
+        {
+          "role": "Member 2",
+          "name": "Sameer Salunke",
+          "githubUsername": "Kaustubh"
+        },
+        {
+          "role": "Member 3",
+          "name": "Kaustubh Dhongade",
+          "githubUsername": "Atharva0745\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/NilanshuRanjan/Inheritence-Project",
+        "owner": "NilanshuRanjan",
+        "name": "Inheritence-Project"
+      }
+    },
+    {
+      "teamName": "codecrackers",
+      "repoUrl": "https://github.com/sahilwaje23/SafarMitra",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Chaitanya Shinde ",
+          "githubUsername": "Chaitanya-666",
+          "email": "crshinde_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Yogesh Palve",
+          "githubUsername": "Yogesh-Palve"
+        },
+        {
+          "role": "Member 2",
+          "name": "Ritesh Saindane",
+          "githubUsername": "Ritesh-Saindane"
+        },
+        {
+          "role": "Member 3",
+          "name": "Sahil Waje",
+          "githubUsername": "sahilwaje23\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/sahilwaje23/SafarMitra",
+        "owner": "sahilwaje23",
+        "name": "SafarMitra"
+      }
+    },
+    {
+      "teamName": "codeharmony",
+      "repoUrl": "https://github.com/sneha31415/code-harmony",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Swarali Bhuyar ",
+          "githubUsername": "swallaB",
+          "email": "spbhuyar_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Sneha Singh ",
+          "githubUsername": "sneha31415"
+        },
+        {
+          "role": "Member 2",
+          "name": "Nandini Sutrave",
+          "githubUsername": "Nandini-Sutrave"
+        },
+        {
+          "role": "Member 3",
+          "name": "Kajal Kimari",
+          "githubUsername": "KajalTheDeveloper\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/sneha31415/code-harmony",
+        "owner": "sneha31415",
+        "name": "code-harmony"
+      }
+    },
+    {
+      "teamName": "Codeplay ",
+      "repoUrl": "https://github.com/savageomie/Om-Codeplay.git",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Om Chaudhari ",
+          "githubUsername": "savageomie",
+          "email": "otchaudhari_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Piyush Chandre ",
+          "githubUsername": "Piyushchandre2004"
+        },
+        {
+          "role": "Member 2",
+          "name": "Vedant Anasune ",
+          "githubUsername": "vedantanasune"
+        },
+        {
+          "role": "Member 3",
+          "name": "Prashansa Bhatia",
+          "githubUsername": "Prashu0705\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/savageomie/Om-Codeplay",
+        "owner": "savageomie",
+        "name": "Om-Codeplay"
+      }
+    },
+    {
+      "teamName": "Coding Tales",
+      "repoUrl": "https://github.com/Afreen-Kazi-1/Blendify-AI-Music-Blender",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Afreen Kazi",
+          "githubUsername": "Afreen-Kazi-1",
+          "email": "aikazi_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Abhiman Shirsath ",
+          "githubUsername": "AbhimanSh"
+        },
+        {
+          "role": "Member 2",
+          "name": "Harsh Sagare",
+          "githubUsername": "hssagare"
+        },
+        {
+          "role": "Member 3",
+          "name": "Tisha Rathi",
+          "githubUsername": "Toto-Roro\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Afreen-Kazi-1/Blendify-AI-Music-Blender",
+        "owner": "Afreen-Kazi-1",
+        "name": "Blendify-AI-Music-Blender"
+      }
+    },
+    {
+      "teamName": "coding-yoddhas",
+      "repoUrl": "https://github.com/aryan1827/ScoreVision",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Anshul Pemberthi ",
+          "githubUsername": "theroooking07",
+          "email": "aabendre_b23@et.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Aryan Bendre",
+          "githubUsername": "aryan1827"
+        },
+        {
+          "role": "Member 2",
+          "name": "Aditya Bandral",
+          "githubUsername": "Aditya-alpha"
+        },
+        {
+          "role": "Member 3",
+          "name": "Padmin Bhat",
+          "githubUsername": "Padmin-12\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/aryan1827/ScoreVision",
+        "owner": "aryan1827",
+        "name": "ScoreVision"
+      }
+    },
+    {
+      "teamName": "Cyber Knights",
+      "repoUrl": "https://github.com/Ricchi143/Cyber-knights.git",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Rajat Chakraborty",
+          "githubUsername": "AjumSheiCaydaresh",
+          "email": "rschakraborty_b23@me.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Ricchi Vedant",
+          "githubUsername": "Ricchi143"
+        },
+        {
+          "role": "Member 2",
+          "name": "Sayee Ramteke",
+          "githubUsername": "SayeeRamteke"
+        },
+        {
+          "role": "Member 3",
+          "name": "Prachi Chavhan",
+          "githubUsername": "Prachichavhan1706\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Ricchi143/Cyber-knights",
+        "owner": "Ricchi143",
+        "name": "Cyber-knights"
+      }
+    },
+    {
+      "teamName": "Dev Dynamos",
+      "repoUrl": "https://github.com/bhargava-d16/Inheritance-Project.git",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Bhargav Dabhade ",
+          "githubUsername": "bhargava-d16",
+          "email": "bsdabhade_b23@et.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Kalp Mehta",
+          "githubUsername": "kalpm1110"
+        },
+        {
+          "role": "Member 2",
+          "name": "Kartik Lande",
+          "githubUsername": "lande26"
+        },
+        {
+          "role": "Member 3",
+          "name": "Sumedh Charjan ",
+          "githubUsername": "sumedhcharjan\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/bhargava-d16/Inheritance-Project",
+        "owner": "bhargava-d16",
+        "name": "Inheritance-Project"
+      }
+    },
+    {
+      "teamName": "domain-expanders",
+      "repoUrl": "https://github.com/Shauryaa20/Story-and-Poetry-Gen-Project/tree/main",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Yadnyesh Patil",
+          "githubUsername": "YoLynx",
+          "email": "ynpatil_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Shaurya Rajput",
+          "githubUsername": "Shauryaa20"
+        },
+        {
+          "role": "Member 2",
+          "name": "Aaditya Joil",
+          "githubUsername": "Darsh-KShah"
+        },
+        {
+          "role": "Member 3",
+          "name": "Darsh Shah",
+          "githubUsername": "JaytidaA\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Shauryaa20/Story-and-Poetry-Gen-Project/tree/main",
+        "owner": "tree",
+        "name": "main"
+      }
+    },
+    {
+      "teamName": "heisenbug",
+      "repoUrl": "https://github.com/Kartikay-0111/DSAfied",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Kartikay Pandey",
+          "githubUsername": "Kartikay-0111",
+          "email": "knpandey_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Tanish Bhamare",
+          "githubUsername": "Tanish2207"
+        },
+        {
+          "role": "Member 2",
+          "name": "Gaurav Gaur",
+          "githubUsername": "MIGHTYgAur"
+        },
+        {
+          "role": "Member 3",
+          "name": "Rupak Gupta",
+          "githubUsername": "aitwehrrg\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Kartikay-0111/DSAfied",
+        "owner": "Kartikay-0111",
+        "name": "DSAfied"
+      }
+    },
+    {
+      "teamName": "Innovengers ",
+      "repoUrl": "https://github.com/GhodeswarShreya/Innovengers",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Shreya Ghodeswar ",
+          "githubUsername": "GhodeswarShreya",
+          "email": "sjghodeswar_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Diksha Dhanmane ",
+          "githubUsername": "dikshadhanmane"
+        },
+        {
+          "role": "Member 2",
+          "name": "Khushbu Chaudhari",
+          "githubUsername": "KhushbuChaudhari"
+        },
+        {
+          "role": "Member 3",
+          "name": "Vaishnavi Rithe ",
+          "githubUsername": "VaishnaviRithe\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/GhodeswarShreya/Innovengers",
+        "owner": "GhodeswarShreya",
+        "name": "Innovengers"
+      }
+    },
+    {
+      "teamName": "Kaizen",
+      "repoUrl": "https://github.com/Angell1147/Health-Tracker.git",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Angell Gandhi",
+          "githubUsername": "Angell_1147",
+          "email": "ajgandhi_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Arushi Rajput",
+          "githubUsername": "Arushiee"
+        },
+        {
+          "role": "Member 2",
+          "name": "Diva Sharma",
+          "githubUsername": "Divasharmavjti"
+        },
+        {
+          "role": "Member 3",
+          "name": "Aditya Chatopadhyay ",
+          "githubUsername": "AdityaC2327 \r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Angell1147/Health-Tracker",
+        "owner": "Angell1147",
+        "name": "Health-Tracker"
+      }
+    },
+    {
+      "teamName": "Kaleshi",
+      "repoUrl": "https://github.com/vidhirohira/Virtual_Interior_Designer",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Vidhi Rohira",
+          "githubUsername": "vidhirohira",
+          "email": "vyrohira_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Dhruv Panchal",
+          "githubUsername": "dhruv18"
+        },
+        {
+          "role": "Member 2",
+          "name": "Chaitra Samant",
+          "githubUsername": "chaitra-samant"
+        },
+        {
+          "role": "Member 3",
+          "name": "Viraj Vora",
+          "githubUsername": "viraj-vora24\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/vidhirohira/Virtual_Interior_Designer",
+        "owner": "vidhirohira",
+        "name": "Virtual_Interior_Designer"
+      }
+    },
+    {
+      "teamName": "mappa",
+      "repoUrl": "https://github.com/Amal-Verma/mappa_inheritance",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Ghruank Kothare",
+          "githubUsername": "ghruank",
+          "email": "gpkothare_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Soham Rane",
+          "githubUsername": "soham30rane"
+        },
+        {
+          "role": "Member 2",
+          "name": "Abhay Upadhyay",
+          "githubUsername": "urabhay10"
+        },
+        {
+          "role": "Member 3",
+          "name": "Amal Verma",
+          "githubUsername": "Amal-Verma\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Amal-Verma/mappa_inheritance",
+        "owner": "Amal-Verma",
+        "name": "mappa_inheritance"
+      }
+    },
+    {
+      "teamName": "mars",
+      "repoUrl": "https://github.com/ahaandesai27/Inheritance-2024-mars",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Ahaan Desai",
+          "githubUsername": "ahaandesai27",
+          "email": "ardesai_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Mohnish Pathak",
+          "githubUsername": "BoredAAf1"
+        },
+        {
+          "role": "Member 2",
+          "name": "Raunak Thanawala",
+          "githubUsername": "Raunak-2005"
+        },
+        {
+          "role": "Member 3",
+          "name": "Siddharth Patil",
+          "githubUsername": "simd1\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/ahaandesai27/Inheritance-2024-mars",
+        "owner": "ahaandesai27",
+        "name": "Inheritance-2024-mars"
+      }
+    },
+    {
+      "teamName": "Mindspark",
+      "repoUrl": "https://github.com/Bhoomi-29/Scholarship_Website",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Bhoomi Sanjay Kokate ",
+          "githubUsername": "Bhoomi-29",
+          "email": "bskokate_b23@ee.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Kashish Yadav",
+          "githubUsername": "rupali-thakre"
+        },
+        {
+          "role": "Member 2",
+          "name": "Rupali Thakre",
+          "githubUsername": "kashish-yadav"
+        },
+        {
+          "role": "Member 3",
+          "name": "Abhishek Kotwani",
+          "githubUsername": "Abhi-sheKk\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Bhoomi-29/Scholarship_Website",
+        "owner": "Bhoomi-29",
+        "name": "Scholarship_Website"
+      }
+    },
+    {
+      "teamName": "Nakamoto's Ninjas",
+      "repoUrl": "https://github.com/JayPatil9/CareSync",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Anya Agrawal",
+          "githubUsername": "Anya-Agrawal-05",
+          "email": "amagrawal_b23@el.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Jay Patil",
+          "githubUsername": "JayPatil9"
+        },
+        {
+          "role": "Member 2",
+          "name": "Yadnyesh Chaudhari",
+          "githubUsername": "Yadnyeshhh"
+        },
+        {
+          "role": "Member 3",
+          "name": "Yashodhan Zingade",
+          "githubUsername": "YASHODHANZ\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/JayPatil9/CareSync",
+        "owner": "JayPatil9",
+        "name": "CareSync"
+      }
+    },
+    {
+      "teamName": "Neural Net Neps ",
+      "repoUrl": "https://github.com/Piyush-221/Faultdetection_NNN.git",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Piyush Pandey",
+          "githubUsername": "Piyush-221",
+          "email": "pmpandey_b23@tx.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Abhas Gulhane",
+          "githubUsername": "AbhasG-07"
+        },
+        {
+          "role": "Member 2",
+          "name": "Ishwar Upadhye ",
+          "githubUsername": "ishwar0506"
+        },
+        {
+          "role": "Member 3",
+          "name": "Kishor Sumb",
+          "githubUsername": "Anant-on-git\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Piyush-221/Faultdetection_NNN",
+        "owner": "Piyush-221",
+        "name": "Faultdetection_NNN"
+      }
+    },
+    {
+      "teamName": "notbad",
+      "repoUrl": "https://github.com/RushabhMehta2005/CPGA-Inheritance-2024",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Rushabh Mehta",
+          "githubUsername": "RushabhMehta2005",
+          "email": "rbmehta_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Vansh Jalora",
+          "githubUsername": "v1shJ"
+        },
+        {
+          "role": "Member 2",
+          "name": "Siddhesh Pandey",
+          "githubUsername": "sid-7905"
+        },
+        {
+          "role": "Member 3",
+          "name": "Rahul Desai",
+          "githubUsername": "Rahuldesai0\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/RushabhMehta2005/CPGA-Inheritance-2024",
+        "owner": "RushabhMehta2005",
+        "name": "CPGA-Inheritance-2024"
+      }
+    },
+    {
+      "teamName": "Odyssey",
+      "repoUrl": "https://github.com/Captain-MUDIT/Odyssey",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Mudit Jain",
+          "githubUsername": "Captain-MUDIT",
+          "email": "mvjain_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Soham Shah",
+          "githubUsername": "Sohamshah03"
+        },
+        {
+          "role": "Member 2",
+          "name": "Janvi Soni",
+          "githubUsername": "janviisonii23"
+        },
+        {
+          "role": "Member 3",
+          "name": "Krish Shah",
+          "githubUsername": "KrishShah3011\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Captain-MUDIT/Odyssey",
+        "owner": "Captain-MUDIT",
+        "name": "Odyssey"
+      }
+    },
+    {
+      "teamName": "Onyx",
+      "repoUrl": "https://github.com/PrasannaKasar/Image-Captioning",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Prasanna Kasar",
+          "githubUsername": "PrasannaKasar",
+          "email": "pskasar_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Harshal Kamble",
+          "githubUsername": "xyz-harshal"
+        },
+        {
+          "role": "Member 2",
+          "name": "Aarya Pandey",
+          "githubUsername": "geeky33"
+        },
+        {
+          "role": "Member 3",
+          "name": "Nisarg Gadhiya",
+          "githubUsername": "doesn't have github account\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/PrasannaKasar/Image-Captioning",
+        "owner": "PrasannaKasar",
+        "name": "Image-Captioning"
+      }
+    },
+    {
+      "teamName": "Oops",
+      "repoUrl": "https://github.com/YashviMehta03/Sustainable_Travel_Planner",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Yashvi Mehta",
+          "githubUsername": "YashviMehta03",
+          "email": "ydmehta_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Mahi Palimkar ",
+          "githubUsername": "mahipalimkar"
+        },
+        {
+          "role": "Member 2",
+          "name": "Aadit Pujari ",
+          "githubUsername": "pipinstallaadit"
+        },
+        {
+          "role": "Member 3",
+          "name": "Sourish Phate",
+          "githubUsername": "sourishphate\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/YashviMehta03/Sustainable_Travel_Planner",
+        "owner": "YashviMehta03",
+        "name": "Sustainable_Travel_Planner"
+      }
+    },
+    {
+      "teamName": "pdf_files",
+      "repoUrl": "https://github.com/vaishvi2811/Pdf_files-Inheritance",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Vaishvi Khandelwal ",
+          "githubUsername": "vaishvi2811",
+          "email": "vskhandelwal_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Pratham Bhamare",
+          "githubUsername": "PrathamBhamare"
+        },
+        {
+          "role": "Member 2",
+          "name": "Sadhya Jain",
+          "githubUsername": "sadhyaJain"
+        },
+        {
+          "role": "Member 3",
+          "name": "Sahil Langhe",
+          "githubUsername": "sahillanghe05\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/vaishvi2811/Pdf_files-Inheritance",
+        "owner": "vaishvi2811",
+        "name": "Pdf_files-Inheritance"
+      }
+    },
+    {
+      "teamName": "PMEE",
+      "repoUrl": "https://github.com/rohityadav483/SIMIGRA",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Kaustubha Gawas ",
+          "githubUsername": "Kaustubhagawas47",
+          "email": "kugawas_b23@pe.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Rohit Yadav",
+          "githubUsername": "rohityadav483"
+        },
+        {
+          "role": "Member 2",
+          "name": "Omkar Gupte ",
+          "githubUsername": "OmkarGupte205"
+        },
+        {
+          "role": "Member 3",
+          "name": "Samar Gamare",
+          "githubUsername": "Samy109005\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/rohityadav483/SIMIGRA",
+        "owner": "rohityadav483",
+        "name": "SIMIGRA"
+      }
+    },
+    {
+      "teamName": "Quantum Coders",
+      "repoUrl": "https://github.com/Vedaang123/object-remover.git",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Vedaang Devendra Pagnis",
+          "githubUsername": "Vedaang123",
+          "email": "vdpagnis_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Ayaan Shaikh",
+          "githubUsername": "ayaanshk"
+        },
+        {
+          "role": "Member 2",
+          "name": "Daksh Gohil",
+          "githubUsername": "dakshvjti"
+        },
+        {
+          "role": "Member 3",
+          "name": "Devansh Panchal",
+          "githubUsername": "ddpVJTI\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Vedaang123/object-remover",
+        "owner": "Vedaang123",
+        "name": "object-remover"
+      }
+    },
+    {
+      "teamName": "Runtime error",
+      "repoUrl": "https://github.com/Ojasp21/runtime_error",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Ojas Patil",
+          "githubUsername": "Ojasp21",
+          "email": "ospatil_b23@et.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Santrupt ",
+          "githubUsername": "santrupt29"
+        },
+        {
+          "role": "Member 2",
+          "name": "Gaurav Sharma",
+          "githubUsername": "gsgit123"
+        },
+        {
+          "role": "Member 3",
+          "name": "Akash",
+          "githubUsername": "shinymack\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Ojasp21/runtime_error",
+        "owner": "Ojasp21",
+        "name": "runtime_error"
+      }
+    },
+    {
+      "teamName": "Sentinels",
+      "repoUrl": "https://github.com/PMS61/Eloquence",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Prathamesh Sankhe ",
+          "githubUsername": "PMS61",
+          "email": "pmsankhe_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Zoher Vohra",
+          "githubUsername": "zohervohra"
+        },
+        {
+          "role": "Member 2",
+          "name": "Dheer Joisher",
+          "githubUsername": "DheerJoisher"
+        },
+        {
+          "role": "Member 3",
+          "name": "Soham Margaj",
+          "githubUsername": "soham555-maker\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/PMS61/Eloquence",
+        "owner": "PMS61",
+        "name": "Eloquence"
+      }
+    },
+    {
+      "teamName": "Shift+elite",
+      "repoUrl": "https://github.com/pragatikharat17/shift-elite",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Dhriti Jain",
+          "githubUsername": "Dhriti2208",
+          "email": "pdkharat_b23@et.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Pragati kharat ",
+          "githubUsername": "Pragatikharat17"
+        },
+        {
+          "role": "Member 2",
+          "name": "Arya Borkar ",
+          "githubUsername": "aryaborkar06"
+        },
+        {
+          "role": "Member 3",
+          "name": "Divya Addagatla",
+          "githubUsername": "adivya15\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/pragatikharat17/shift-elite",
+        "owner": "pragatikharat17",
+        "name": "shift-elite"
+      }
+    },
+    {
+      "teamName": "Team titans",
+      "repoUrl": "https://github.com/Shaunakwanelkar/Team-Titans",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Amol",
+          "githubUsername": "amolbidwe",
+          "email": "shwanelkar_b23@tx.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Lokesh",
+          "githubUsername": "garadelokesh"
+        },
+        {
+          "role": "Member 2",
+          "name": "Shaunak",
+          "githubUsername": "shaunakwanelkar"
+        },
+        {
+          "role": "Member 3",
+          "name": "Swapnil",
+          "githubUsername": "Swapnil9292\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Shaunakwanelkar/Team-Titans",
+        "owner": "Shaunakwanelkar",
+        "name": "Team-Titans"
+      }
+    },
+    {
+      "teamName": "tech-titans-ishika",
+      "repoUrl": "https://github.com/ishu2022/Streamflix",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Ishika Mohod",
+          "githubUsername": "ishu2022",
+          "email": "ivmohod_b23@ee.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Riya Gupta",
+          "githubUsername": " rg1464054"
+        },
+        {
+          "role": "Member 2",
+          "name": "Apurva Sharma ",
+          "githubUsername": "apurva1435"
+        },
+        {
+          "role": "Member 3",
+          "name": "Giteshwari Rahate",
+          "githubUsername": "giteshwari08\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/ishu2022/Streamflix",
+        "owner": "ishu2022",
+        "name": "Streamflix"
+      }
+    },
+    {
+      "teamName": "tech-titans-rashmi",
+      "repoUrl": "https://github.com/TechTitansInheritance/MySoc",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Rashmi Timmin Kamdar",
+          "githubUsername": "https://github.com/RashmiKamdar",
+          "email": "rtkamdar_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Vedant Shetye",
+          "githubUsername": "https://github.com/NOOBPOOK"
+        },
+        {
+          "role": "Member 2",
+          "name": "Advait Desai",
+          "githubUsername": "https://github.com/Advait2211"
+        },
+        {
+          "role": "Member 3",
+          "name": "Sakshi Bhirud",
+          "githubUsername": "https://github.com/bsakshiii\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/TechTitansInheritance/MySoc",
+        "owner": "TechTitansInheritance",
+        "name": "MySoc"
+      }
+    },
+    {
+      "teamName": "The Codex Crew",
+      "repoUrl": "https://search.app/Ps8vEvQYsZkJpi6f7",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Sakshi Kore",
+          "githubUsername": "SakshiKore",
+          "email": "svkore_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Ananya Preman",
+          "githubUsername": "AnanyaPrem"
+        },
+        {
+          "role": "Member 2",
+          "name": "Atharv Pandey",
+          "githubUsername": "Atharv842"
+        },
+        {
+          "role": "Member 3",
+          "name": "Jaydeep Kamble",
+          "githubUsername": "Jaydeep72\r"
+        }
+      ],
+      "repository": {
+        "url": "https://search.app/Ps8vEvQYsZkJpi6f7",
+        "owner": "search.app",
+        "name": "Ps8vEvQYsZkJpi6f7"
+      }
+    },
+    {
+      "teamName": "The Dominator's",
+      "repoUrl": "https://github.com/waghmareuday/VJTI-StaySmart.git",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Uday Waghmare",
+          "githubUsername": "waghmareuday",
+          "email": "umwaghmare_b23@it.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Purvesh Ghode",
+          "githubUsername": "ftpurvesh"
+        },
+        {
+          "role": "Member 2",
+          "name": "Pramod Sirsath",
+          "githubUsername": "pramodsirsath"
+        },
+        {
+          "role": "Member 3",
+          "name": "Aryan Ingale",
+          "githubUsername": "vidarya\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/waghmareuday/VJTI-StaySmart",
+        "owner": "waghmareuday",
+        "name": "VJTI-StaySmart"
+      }
+    },
+    {
+      "teamName": "the-heirs",
+      "repoUrl": "https://github.com/dikshat25/THE-HEIRS-INHERITANCE",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Diksha Thongire",
+          "githubUsername": "dikshat25",
+          "email": "dathongire_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Shipra Singh",
+          "githubUsername": "S-Shipra"
+        },
+        {
+          "role": "Member 2",
+          "name": "Arpita Singh",
+          "githubUsername": "ArpitaSingh12"
+        },
+        {
+          "role": "Member 3",
+          "name": "Prachi Shende",
+          "githubUsername": "Prachi-Shende\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/dikshat25/THE-HEIRS-INHERITANCE",
+        "owner": "dikshat25",
+        "name": "THE-HEIRS-INHERITANCE"
+      }
+    },
+    {
+      "teamName": "tragic-bytes",
+      "repoUrl": "https://github.com/DARSHITSHAH-2906/Inheritance-Edusphere",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Darshit shah",
+          "githubUsername": "DARSHITSHAH-2906",
+          "email": "dbshah_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Karan shah",
+          "githubUsername": "KaranShah1911"
+        },
+        {
+          "role": "Member 2",
+          "name": "Kavya shah",
+          "githubUsername": "KavyaShah1105"
+        },
+        {
+          "role": "Member 3",
+          "name": "Harsh pimple",
+          "githubUsername": "harshpimple2005\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/DARSHITSHAH-2906/Inheritance-Edusphere",
+        "owner": "DARSHITSHAH-2906",
+        "name": "Inheritance-Edusphere"
+      }
+    },
+    {
+      "teamName": "Vyuha",
+      "repoUrl": "https://github.com/PROG-TaNi/Vyuha_Web3",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Tarush Nigam",
+          "githubUsername": "PROG-TaNi",
+          "email": "tsnigam_b23@ee.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Krushna Tarde",
+          "githubUsername": "Krusshhnnaa"
+        },
+        {
+          "role": "Member 2",
+          "name": "Adwaita Patane ",
+          "githubUsername": "addy-1-23"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/PROG-TaNi/Vyuha_Web3",
+        "owner": "PROG-TaNi",
+        "name": "Vyuha_Web3"
+      }
+    },
+    {
+      "teamName": "Whathecode",
+      "repoUrl": "https://github.com/prajyot-codes/WhatheCode-LearnStream",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Prajyot narware ",
+          "githubUsername": "prajyot-codes",
+          "email": "ppnarware_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Abdul razzaq ",
+          "githubUsername": " Armunshi"
+        },
+        {
+          "role": "Member 2",
+          "name": "Wasi khan",
+          "githubUsername": "wasiiiii76"
+        },
+        {
+          "role": "Member 3",
+          "name": "Harsh sharma ",
+          "githubUsername": "harshgsharma1501\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/prajyot-codes/WhatheCode-LearnStream",
+        "owner": "prajyot-codes",
+        "name": "WhatheCode-LearnStream"
+      }
+    },
+    {
+      "teamName": "Widealpha",
+      "repoUrl": "https://github.com/Abhaykumarchoudhary/AIO-All-in-one-student-toolkit-",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Abhay Kumar",
+          "githubUsername": "Abhaykumarchoudhary",
+          "email": "avkumar_b23@ce.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Kushal bhan",
+          "githubUsername": "kushalb005"
+        },
+        {
+          "role": "Member 2",
+          "name": "Ashutosh Kumar",
+          "githubUsername": "Ashutosh1o1"
+        },
+        {
+          "role": "Member 3",
+          "name": "Nischint singh",
+          "githubUsername": "Nischint007\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Abhaykumarchoudhary/AIO-All-in-one-student-toolkit-",
+        "owner": "Abhaykumarchoudhary",
+        "name": "AIO-All-in-one-student-toolkit-"
+      }
+    },
+    {
+      "teamName": "Works on my machine",
+      "repoUrl": "https://github.com/NinadShegokar/Works-On-My-Machine",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Ninad Shegokar ",
+          "githubUsername": "NinadShegokar",
+          "email": "nsshegokar_b23@ee.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Khush Agrawal ",
+          "githubUsername": "Khushmagrawal"
+        },
+        {
+          "role": "Member 2",
+          "name": "Sujal Sakpal",
+          "githubUsername": "sujal-sakpal"
+        },
+        {
+          "role": "Member 3",
+          "name": "Rohit Bhargav",
+          "githubUsername": "Rohitb502\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/NinadShegokar/Works-On-My-Machine",
+        "owner": "NinadShegokar",
+        "name": "Works-On-My-Machine"
+      }
+    },
+    {
+      "teamName": "yashogale",
+      "repoUrl": "https://github.com/MAVERICK-111/INHERITANCE",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Yash Ogale ",
+          "githubUsername": "yashogale30",
+          "email": "ynogale_b23@et.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Harsh Ogale",
+          "githubUsername": "harshogale04"
+        },
+        {
+          "role": "Member 2",
+          "name": "Atharva Purushe ",
+          "githubUsername": "AtharvaPuru"
+        },
+        {
+          "role": "Member 3",
+          "name": "Piyush Patil",
+          "githubUsername": "MAVERICK-111\r"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/MAVERICK-111/INHERITANCE",
+        "owner": "MAVERICK-111",
+        "name": "INHERITANCE"
+      }
+    },
+    {
+      "teamName": "yellowhat",
+      "repoUrl": "https://github.com/agn222/YellowHat",
+      "members": [
+        {
+          "role": "Team Leader",
+          "name": "Atharva Naik",
+          "githubUsername": "agn222",
+          "email": "agnaik_b23@ci.vjti.ac.in"
+        },
+        {
+          "role": "Member 1",
+          "name": "Dhawal Mate",
+          "githubUsername": "Dhawallmate"
+        },
+        {
+          "role": "Member 2",
+          "name": "Shriyash Phadatare",
+          "githubUsername": "greywolf47"
+        },
+        {
+          "role": "Member 3",
+          "name": "None",
+          "githubUsername": "None"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/agn222/YellowHat",
+        "owner": "agn222",
+        "name": "YellowHat"
+      }
+    }
+  ]
+}

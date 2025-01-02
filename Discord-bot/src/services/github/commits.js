@@ -56,7 +56,12 @@ export async function getWeeklyCommits(owner, repo, cache) {
         cache.set(cacheKey, detailedCommits);
         return detailedCommits;
     } catch (error) {
+        // Handle private repository or other access errors
+        if (error.status === 404 || error.status === 403 || error.status === 401) {
+            console.warn(`Repository ${owner}/${repo} is either private or inaccessible: ${error.message}`);
+            return [];
+        }
         console.error(`Error fetching commits for ${owner}/${repo}:`, error);
-        throw error;
+        return [];
     }
 } 

@@ -2,7 +2,7 @@
   "teams": [
     {
       "teamName": "Anti-Anachrony",
-      "repoUrl": "https://github.com/ShreyaR2/CrypTick.git",
+      "repoUrl": "https://github.com/ShreyaR2/CrypTick",
       "members": [
         {
           "role": "Team Leader",
@@ -23,7 +23,7 @@
         {
           "role": "Member 3",
           "name": "Carol Chopde",
-          "githubUsername": "CarolChopde\r"
+          "githubUsername": "CarolChopde"
         }
       ],
       "repository": {
@@ -55,7 +55,7 @@
         {
           "role": "Member 3",
           "name": "Swayam Shah",
-          "githubUsername": "sonu0305\r"
+          "githubUsername": "sonu0305"
         }
       ],
       "repository": {
@@ -86,8 +86,8 @@
         },
         {
           "role": "Member 3",
-          "name": "Pawan Shinde ",
-          "githubUsername": "pawanshinde123\r"
+          "name": "Pawan Shinde",
+          "githubUsername": "pawanshinde123"
         }
       ],
       "repository": {
@@ -119,7 +119,7 @@
         {
           "role": "Member 3",
           "name": "Aditya Mahajan",
-          "githubUsername": "mahajan_777\r"
+          "githubUsername": "mahajan_777"
         }
       ],
       "repository": {
@@ -129,12 +129,12 @@
       }
     },
     {
-      "teamName": "Asteroid destroyers ",
+      "teamName": "Asteroid destroyers",
       "repoUrl": "https://github.com/Dhanu584/HostelConnect",
       "members": [
         {
           "role": "Team Leader",
-          "name": "Dhanashri Garande ",
+          "name": "Dhanashri Garande",
           "githubUsername": "Dhanu584",
           "email": "dbgarande_b23@ce.vjti.ac.in"
         },
@@ -151,7 +151,7 @@
         {
           "role": "Member 3",
           "name": "Amey Kadu",
-          "githubUsername": "XtrmVoid\r"
+          "githubUsername": "XtrmVoid"
         }
       ],
       "repository": {
@@ -183,7 +183,7 @@
         {
           "role": "Member 3",
           "name": "tejas acharya",
-          "githubUsername": "tejas-a11\r"
+          "githubUsername": "tejas-a11"
         }
       ],
       "repository": {
@@ -204,7 +204,7 @@
         },
         {
           "role": "Member 1",
-          "name": "Aadit Narke ",
+          "name": "Aadit Narke",
           "githubUsername": "1thirty-five"
         },
         {
@@ -215,7 +215,7 @@
         {
           "role": "Member 3",
           "name": "Shrivara Bhat",
-          "githubUsername": "SOULShri\r"
+          "githubUsername": "SOULShri"
         }
       ],
       "repository": {
@@ -230,13 +230,13 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Pranjal Sawant ",
+          "name": "Pranjal Sawant",
           "githubUsername": "PBSAWANT27",
           "email": "pbsawant_b23@et.vjti.ac.in"
         },
         {
           "role": "Member 1",
-          "name": "Tanisha sarkar ",
+          "name": "Tanisha sarkar",
           "githubUsername": "stanisha7"
         },
         {
@@ -246,8 +246,8 @@
         },
         {
           "role": "Member 3",
-          "name": "Vidhi Singh ",
-          "githubUsername": "vidhis607\r"
+          "name": "Vidhi Singh",
+          "githubUsername": "vidhis607"
         }
       ],
       "repository": {
@@ -262,13 +262,13 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Shamita Dhamankar ",
+          "name": "Shamita Dhamankar",
           "githubUsername": "shamita31",
           "email": "spdhamankar_b23@et.vjti.ac.in"
         },
         {
           "role": "Member 1",
-          "name": "Sanika Deshmukh ",
+          "name": "Sanika Deshmukh",
           "githubUsername": "Sanikad20"
         },
         {
@@ -278,8 +278,8 @@
         },
         {
           "role": "Member 3",
-          "name": "Kartik Bulusu ",
-          "githubUsername": "KartikB3\r"
+          "name": "Kartik Bulusu",
+          "githubUsername": "KartikB3"
         }
       ],
       "repository": {
@@ -311,7 +311,7 @@
         {
           "role": "Member 3",
           "name": "Kaustubh Sonawane",
-          "githubUsername": "Kaustubh6077\r"
+          "githubUsername": "Kaustubh6077"
         }
       ],
       "repository": {
@@ -342,8 +342,8 @@
         },
         {
           "role": "Member 3",
-          "name": "Vishal Acharya ",
-          "githubUsername": "vishalacharya09\r"
+          "name": "Vishal Acharya",
+          "githubUsername": "vishalacharya09"
         }
       ],
       "repository": {
@@ -354,7 +354,7 @@
     },
     {
       "teamName": "circuit-breakers",
-      "repoUrl": "https://github.com/hmjag07/CircuitBreakers.git",
+      "repoUrl": "https://github.com/hmjag07/CircuitBreakers",
       "members": [
         {
           "role": "Team Leader",
@@ -375,7 +375,7 @@
         {
           "role": "Member 3",
           "name": "Saniya Sangnale",
-          "githubUsername": "SANU-2006\r"
+          "githubUsername": "SANU-2006"
         }
       ],
       "repository": {
@@ -385,12 +385,12 @@
       }
     },
     {
-      "teamName": "Clueless coders ",
+      "teamName": "Clueless coders",
       "repoUrl": "https://github.com/tithee16/Clueless-coders-",
       "members": [
         {
           "role": "Team Leader",
-          "name": "Tithee Upase ",
+          "name": "Tithee Upase",
           "githubUsername": "tithee16",
           "email": "tvupase_b23@it.vjti.ac.in"
         },
@@ -406,8 +406,8 @@
         },
         {
           "role": "Member 3",
-          "name": "Samiksha Navale ",
-          "githubUsername": "samikshanavale\r"
+          "name": "Samiksha Navale",
+          "githubUsername": "samikshanavale"
         }
       ],
       "repository": {
@@ -422,7 +422,7 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Paanchi Nahar ",
+          "name": "Paanchi Nahar",
           "githubUsername": "PaanchiNahar",
           "email": "psnahar_b23@it.vjti.ac.in"
         },
@@ -439,7 +439,7 @@
         {
           "role": "Member 3",
           "name": "Raghunandan Patel",
-          "githubUsername": "RaghunandanPatel\r"
+          "githubUsername": "RaghunandanPatel"
         }
       ],
       "repository": {
@@ -471,7 +471,7 @@
         {
           "role": "Member 3",
           "name": "Kaustubh Dhongade",
-          "githubUsername": "Atharva0745\r"
+          "githubUsername": "Atharva0745"
         }
       ],
       "repository": {
@@ -486,7 +486,7 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Chaitanya Shinde ",
+          "name": "Chaitanya Shinde",
           "githubUsername": "Chaitanya-666",
           "email": "crshinde_b23@ce.vjti.ac.in"
         },
@@ -503,7 +503,7 @@
         {
           "role": "Member 3",
           "name": "Sahil Waje",
-          "githubUsername": "sahilwaje23\r"
+          "githubUsername": "sahilwaje23"
         }
       ],
       "repository": {
@@ -518,13 +518,13 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Swarali Bhuyar ",
+          "name": "Swarali Bhuyar",
           "githubUsername": "swallaB",
           "email": "spbhuyar_b23@it.vjti.ac.in"
         },
         {
           "role": "Member 1",
-          "name": "Sneha Singh ",
+          "name": "Sneha Singh",
           "githubUsername": "sneha31415"
         },
         {
@@ -535,7 +535,7 @@
         {
           "role": "Member 3",
           "name": "Kajal Kimari",
-          "githubUsername": "KajalTheDeveloper\r"
+          "githubUsername": "KajalTheDeveloper"
         }
       ],
       "repository": {
@@ -545,29 +545,29 @@
       }
     },
     {
-      "teamName": "Codeplay ",
-      "repoUrl": "https://github.com/savageomie/Om-Codeplay.git",
+      "teamName": "Codeplay",
+      "repoUrl": "https://github.com/savageomie/Om-Codeplay",
       "members": [
         {
           "role": "Team Leader",
-          "name": "Om Chaudhari ",
+          "name": "Om Chaudhari",
           "githubUsername": "savageomie",
           "email": "otchaudhari_b23@ce.vjti.ac.in"
         },
         {
           "role": "Member 1",
-          "name": "Piyush Chandre ",
+          "name": "Piyush Chandre",
           "githubUsername": "Piyushchandre2004"
         },
         {
           "role": "Member 2",
-          "name": "Vedant Anasune ",
+          "name": "Vedant Anasune",
           "githubUsername": "vedantanasune"
         },
         {
           "role": "Member 3",
           "name": "Prashansa Bhatia",
-          "githubUsername": "Prashu0705\r"
+          "githubUsername": "Prashu0705"
         }
       ],
       "repository": {
@@ -588,7 +588,7 @@
         },
         {
           "role": "Member 1",
-          "name": "Abhiman Shirsath ",
+          "name": "Abhiman Shirsath",
           "githubUsername": "AbhimanSh"
         },
         {
@@ -599,7 +599,7 @@
         {
           "role": "Member 3",
           "name": "Tisha Rathi",
-          "githubUsername": "Toto-Roro\r"
+          "githubUsername": "Toto-Roro"
         }
       ],
       "repository": {
@@ -614,7 +614,7 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Anshul Pemberthi ",
+          "name": "Anshul Pemberthi",
           "githubUsername": "theroooking07",
           "email": "aabendre_b23@et.vjti.ac.in"
         },
@@ -631,7 +631,7 @@
         {
           "role": "Member 3",
           "name": "Padmin Bhat",
-          "githubUsername": "Padmin-12\r"
+          "githubUsername": "Padmin-12"
         }
       ],
       "repository": {
@@ -642,7 +642,7 @@
     },
     {
       "teamName": "Cyber Knights",
-      "repoUrl": "https://github.com/Ricchi143/Cyber-knights.git",
+      "repoUrl": "https://github.com/Ricchi143/Cyber-knights",
       "members": [
         {
           "role": "Team Leader",
@@ -663,7 +663,7 @@
         {
           "role": "Member 3",
           "name": "Prachi Chavhan",
-          "githubUsername": "Prachichavhan1706\r"
+          "githubUsername": "Prachichavhan1706"
         }
       ],
       "repository": {
@@ -674,11 +674,11 @@
     },
     {
       "teamName": "Dev Dynamos",
-      "repoUrl": "https://github.com/bhargava-d16/Inheritance-Project.git",
+      "repoUrl": "https://github.com/bhargava-d16/Inheritance-Project",
       "members": [
         {
           "role": "Team Leader",
-          "name": "Bhargav Dabhade ",
+          "name": "Bhargav Dabhade",
           "githubUsername": "bhargava-d16",
           "email": "bsdabhade_b23@et.vjti.ac.in"
         },
@@ -694,8 +694,8 @@
         },
         {
           "role": "Member 3",
-          "name": "Sumedh Charjan ",
-          "githubUsername": "sumedhcharjan\r"
+          "name": "Sumedh Charjan",
+          "githubUsername": "sumedhcharjan"
         }
       ],
       "repository": {
@@ -706,7 +706,7 @@
     },
     {
       "teamName": "domain-expanders",
-      "repoUrl": "https://github.com/Shauryaa20/Story-and-Poetry-Gen-Project/tree/main",
+      "repoUrl": "https://github.com/Shauryaa20/Story-and-Poetry-Gen-Project",
       "members": [
         {
           "role": "Team Leader",
@@ -727,13 +727,13 @@
         {
           "role": "Member 3",
           "name": "Darsh Shah",
-          "githubUsername": "JaytidaA\r"
+          "githubUsername": "JaytidaA"
         }
       ],
       "repository": {
-        "url": "https://github.com/Shauryaa20/Story-and-Poetry-Gen-Project/tree/main",
-        "owner": "tree",
-        "name": "main"
+        "url": "https://github.com/Shauryaa20/Story-and-Poetry-Gen-Project",
+        "owner": "Shauryaa20",
+        "name": "Story-and-Poetry-Gen-Project"
       }
     },
     {
@@ -759,7 +759,7 @@
         {
           "role": "Member 3",
           "name": "Rupak Gupta",
-          "githubUsername": "aitwehrrg\r"
+          "githubUsername": "aitwehrrg"
         }
       ],
       "repository": {
@@ -769,18 +769,18 @@
       }
     },
     {
-      "teamName": "Innovengers ",
+      "teamName": "Innovengers",
       "repoUrl": "https://github.com/GhodeswarShreya/Innovengers",
       "members": [
         {
           "role": "Team Leader",
-          "name": "Shreya Ghodeswar ",
+          "name": "Shreya Ghodeswar",
           "githubUsername": "GhodeswarShreya",
           "email": "sjghodeswar_b23@it.vjti.ac.in"
         },
         {
           "role": "Member 1",
-          "name": "Diksha Dhanmane ",
+          "name": "Diksha Dhanmane",
           "githubUsername": "dikshadhanmane"
         },
         {
@@ -790,8 +790,8 @@
         },
         {
           "role": "Member 3",
-          "name": "Vaishnavi Rithe ",
-          "githubUsername": "VaishnaviRithe\r"
+          "name": "Vaishnavi Rithe",
+          "githubUsername": "VaishnaviRithe"
         }
       ],
       "repository": {
@@ -802,7 +802,7 @@
     },
     {
       "teamName": "Kaizen",
-      "repoUrl": "https://github.com/Angell1147/Health-Tracker.git",
+      "repoUrl": "https://github.com/Angell1147/Health-Tracker",
       "members": [
         {
           "role": "Team Leader",
@@ -822,8 +822,8 @@
         },
         {
           "role": "Member 3",
-          "name": "Aditya Chatopadhyay ",
-          "githubUsername": "AdityaC2327 \r"
+          "name": "Aditya Chatopadhyay",
+          "githubUsername": "AdityaC2327"
         }
       ],
       "repository": {
@@ -855,7 +855,7 @@
         {
           "role": "Member 3",
           "name": "Viraj Vora",
-          "githubUsername": "viraj-vora24\r"
+          "githubUsername": "viraj-vora24"
         }
       ],
       "repository": {
@@ -887,7 +887,7 @@
         {
           "role": "Member 3",
           "name": "Amal Verma",
-          "githubUsername": "Amal-Verma\r"
+          "githubUsername": "Amal-Verma"
         }
       ],
       "repository": {
@@ -919,7 +919,7 @@
         {
           "role": "Member 3",
           "name": "Siddharth Patil",
-          "githubUsername": "simd1\r"
+          "githubUsername": "simd1"
         }
       ],
       "repository": {
@@ -934,7 +934,7 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Bhoomi Sanjay Kokate ",
+          "name": "Bhoomi Sanjay Kokate",
           "githubUsername": "Bhoomi-29",
           "email": "bskokate_b23@ee.vjti.ac.in"
         },
@@ -951,7 +951,7 @@
         {
           "role": "Member 3",
           "name": "Abhishek Kotwani",
-          "githubUsername": "Abhi-sheKk\r"
+          "githubUsername": "Abhi-sheKk"
         }
       ],
       "repository": {
@@ -983,7 +983,7 @@
         {
           "role": "Member 3",
           "name": "Yashodhan Zingade",
-          "githubUsername": "YASHODHANZ\r"
+          "githubUsername": "YASHODHANZ"
         }
       ],
       "repository": {
@@ -993,8 +993,8 @@
       }
     },
     {
-      "teamName": "Neural Net Neps ",
-      "repoUrl": "https://github.com/Piyush-221/Faultdetection_NNN.git",
+      "teamName": "Neural Net Neps",
+      "repoUrl": "https://github.com/Piyush-221/Faultdetection_NNN",
       "members": [
         {
           "role": "Team Leader",
@@ -1009,13 +1009,13 @@
         },
         {
           "role": "Member 2",
-          "name": "Ishwar Upadhye ",
+          "name": "Ishwar Upadhye",
           "githubUsername": "ishwar0506"
         },
         {
           "role": "Member 3",
           "name": "Kishor Sumb",
-          "githubUsername": "Anant-on-git\r"
+          "githubUsername": "Anant-on-git"
         }
       ],
       "repository": {
@@ -1047,7 +1047,7 @@
         {
           "role": "Member 3",
           "name": "Rahul Desai",
-          "githubUsername": "Rahuldesai0\r"
+          "githubUsername": "Rahuldesai0"
         }
       ],
       "repository": {
@@ -1079,7 +1079,7 @@
         {
           "role": "Member 3",
           "name": "Krish Shah",
-          "githubUsername": "KrishShah3011\r"
+          "githubUsername": "KrishShah3011"
         }
       ],
       "repository": {
@@ -1111,7 +1111,7 @@
         {
           "role": "Member 3",
           "name": "Nisarg Gadhiya",
-          "githubUsername": "doesn't have github account\r"
+          "githubUsername": "doesnthavegithubaccount"
         }
       ],
       "repository": {
@@ -1132,18 +1132,18 @@
         },
         {
           "role": "Member 1",
-          "name": "Mahi Palimkar ",
+          "name": "Mahi Palimkar",
           "githubUsername": "mahipalimkar"
         },
         {
           "role": "Member 2",
-          "name": "Aadit Pujari ",
+          "name": "Aadit Pujari",
           "githubUsername": "pipinstallaadit"
         },
         {
           "role": "Member 3",
           "name": "Sourish Phate",
-          "githubUsername": "sourishphate\r"
+          "githubUsername": "sourishphate"
         }
       ],
       "repository": {
@@ -1158,7 +1158,7 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Vaishvi Khandelwal ",
+          "name": "Vaishvi Khandelwal",
           "githubUsername": "vaishvi2811",
           "email": "vskhandelwal_b23@it.vjti.ac.in"
         },
@@ -1175,7 +1175,7 @@
         {
           "role": "Member 3",
           "name": "Sahil Langhe",
-          "githubUsername": "sahillanghe05\r"
+          "githubUsername": "sahillanghe05"
         }
       ],
       "repository": {
@@ -1190,7 +1190,7 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Kaustubha Gawas ",
+          "name": "Kaustubha Gawas",
           "githubUsername": "Kaustubhagawas47",
           "email": "kugawas_b23@pe.vjti.ac.in"
         },
@@ -1201,13 +1201,13 @@
         },
         {
           "role": "Member 2",
-          "name": "Omkar Gupte ",
+          "name": "Omkar Gupte",
           "githubUsername": "OmkarGupte205"
         },
         {
           "role": "Member 3",
           "name": "Samar Gamare",
-          "githubUsername": "Samy109005\r"
+          "githubUsername": "Samy109005"
         }
       ],
       "repository": {
@@ -1218,7 +1218,7 @@
     },
     {
       "teamName": "Quantum Coders",
-      "repoUrl": "https://github.com/Vedaang123/object-remover.git",
+      "repoUrl": "https://github.com/Vedaang123/object-remover",
       "members": [
         {
           "role": "Team Leader",
@@ -1239,7 +1239,7 @@
         {
           "role": "Member 3",
           "name": "Devansh Panchal",
-          "githubUsername": "ddpVJTI\r"
+          "githubUsername": "ddpVJTI"
         }
       ],
       "repository": {
@@ -1260,7 +1260,7 @@
         },
         {
           "role": "Member 1",
-          "name": "Santrupt ",
+          "name": "Santrupt",
           "githubUsername": "santrupt29"
         },
         {
@@ -1271,7 +1271,7 @@
         {
           "role": "Member 3",
           "name": "Akash",
-          "githubUsername": "shinymack\r"
+          "githubUsername": "shinymack"
         }
       ],
       "repository": {
@@ -1286,7 +1286,7 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Prathamesh Sankhe ",
+          "name": "Prathamesh Sankhe",
           "githubUsername": "PMS61",
           "email": "pmsankhe_b23@it.vjti.ac.in"
         },
@@ -1303,7 +1303,7 @@
         {
           "role": "Member 3",
           "name": "Soham Margaj",
-          "githubUsername": "soham555-maker\r"
+          "githubUsername": "soham555-maker"
         }
       ],
       "repository": {
@@ -1324,18 +1324,18 @@
         },
         {
           "role": "Member 1",
-          "name": "Pragati kharat ",
+          "name": "Pragati kharat",
           "githubUsername": "Pragatikharat17"
         },
         {
           "role": "Member 2",
-          "name": "Arya Borkar ",
+          "name": "Arya Borkar",
           "githubUsername": "aryaborkar06"
         },
         {
           "role": "Member 3",
           "name": "Divya Addagatla",
-          "githubUsername": "adivya15\r"
+          "githubUsername": "adivya15"
         }
       ],
       "repository": {
@@ -1367,7 +1367,7 @@
         {
           "role": "Member 3",
           "name": "Swapnil",
-          "githubUsername": "Swapnil9292\r"
+          "githubUsername": "Swapnil9292"
         }
       ],
       "repository": {
@@ -1389,17 +1389,17 @@
         {
           "role": "Member 1",
           "name": "Riya Gupta",
-          "githubUsername": " rg1464054"
+          "githubUsername": "rg1464054"
         },
         {
           "role": "Member 2",
-          "name": "Apurva Sharma ",
+          "name": "Apurva Sharma",
           "githubUsername": "apurva1435"
         },
         {
           "role": "Member 3",
           "name": "Giteshwari Rahate",
-          "githubUsername": "giteshwari08\r"
+          "githubUsername": "giteshwari08"
         }
       ],
       "repository": {
@@ -1415,23 +1415,23 @@
         {
           "role": "Team Leader",
           "name": "Rashmi Timmin Kamdar",
-          "githubUsername": "https://github.com/RashmiKamdar",
+          "githubUsername": "httpsgithubcomRashmiKamdar",
           "email": "rtkamdar_b23@it.vjti.ac.in"
         },
         {
           "role": "Member 1",
           "name": "Vedant Shetye",
-          "githubUsername": "https://github.com/NOOBPOOK"
+          "githubUsername": "httpsgithubcomNOOBPOOK"
         },
         {
           "role": "Member 2",
           "name": "Advait Desai",
-          "githubUsername": "https://github.com/Advait2211"
+          "githubUsername": "httpsgithubcomAdvait2211"
         },
         {
           "role": "Member 3",
           "name": "Sakshi Bhirud",
-          "githubUsername": "https://github.com/bsakshiii\r"
+          "githubUsername": "httpsgithubcombsakshiii"
         }
       ],
       "repository": {
@@ -1442,7 +1442,7 @@
     },
     {
       "teamName": "The Codex Crew",
-      "repoUrl": "https://search.app/Ps8vEvQYsZkJpi6f7",
+      "repoUrl": "https://github.com/searchapp/Ps8vEvQYsZkJpi6f7",
       "members": [
         {
           "role": "Team Leader",
@@ -1463,18 +1463,18 @@
         {
           "role": "Member 3",
           "name": "Jaydeep Kamble",
-          "githubUsername": "Jaydeep72\r"
+          "githubUsername": "Jaydeep72"
         }
       ],
       "repository": {
-        "url": "https://search.app/Ps8vEvQYsZkJpi6f7",
-        "owner": "search.app",
+        "url": "https://github.com/searchapp/Ps8vEvQYsZkJpi6f7",
+        "owner": "searchapp",
         "name": "Ps8vEvQYsZkJpi6f7"
       }
     },
     {
       "teamName": "The Dominator's",
-      "repoUrl": "https://github.com/waghmareuday/VJTI-StaySmart.git",
+      "repoUrl": "https://github.com/waghmareuday/VJTI-StaySmart",
       "members": [
         {
           "role": "Team Leader",
@@ -1495,7 +1495,7 @@
         {
           "role": "Member 3",
           "name": "Aryan Ingale",
-          "githubUsername": "vidarya\r"
+          "githubUsername": "vidarya"
         }
       ],
       "repository": {
@@ -1527,7 +1527,7 @@
         {
           "role": "Member 3",
           "name": "Prachi Shende",
-          "githubUsername": "Prachi-Shende\r"
+          "githubUsername": "Prachi-Shende"
         }
       ],
       "repository": {
@@ -1559,7 +1559,7 @@
         {
           "role": "Member 3",
           "name": "Harsh pimple",
-          "githubUsername": "harshpimple2005\r"
+          "githubUsername": "harshpimple2005"
         }
       ],
       "repository": {
@@ -1585,7 +1585,7 @@
         },
         {
           "role": "Member 2",
-          "name": "Adwaita Patane ",
+          "name": "Adwaita Patane",
           "githubUsername": "addy-1-23"
         }
       ],
@@ -1601,14 +1601,14 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Prajyot narware ",
+          "name": "Prajyot narware",
           "githubUsername": "prajyot-codes",
           "email": "ppnarware_b23@ce.vjti.ac.in"
         },
         {
           "role": "Member 1",
-          "name": "Abdul razzaq ",
-          "githubUsername": " Armunshi"
+          "name": "Abdul razzaq",
+          "githubUsername": "Armunshi"
         },
         {
           "role": "Member 2",
@@ -1617,8 +1617,8 @@
         },
         {
           "role": "Member 3",
-          "name": "Harsh sharma ",
-          "githubUsername": "harshgsharma1501\r"
+          "name": "Harsh sharma",
+          "githubUsername": "harshgsharma1501"
         }
       ],
       "repository": {
@@ -1650,7 +1650,7 @@
         {
           "role": "Member 3",
           "name": "Nischint singh",
-          "githubUsername": "Nischint007\r"
+          "githubUsername": "Nischint007"
         }
       ],
       "repository": {
@@ -1665,13 +1665,13 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Ninad Shegokar ",
+          "name": "Ninad Shegokar",
           "githubUsername": "NinadShegokar",
           "email": "nsshegokar_b23@ee.vjti.ac.in"
         },
         {
           "role": "Member 1",
-          "name": "Khush Agrawal ",
+          "name": "Khush Agrawal",
           "githubUsername": "Khushmagrawal"
         },
         {
@@ -1682,7 +1682,7 @@
         {
           "role": "Member 3",
           "name": "Rohit Bhargav",
-          "githubUsername": "Rohitb502\r"
+          "githubUsername": "Rohitb502"
         }
       ],
       "repository": {
@@ -1697,7 +1697,7 @@
       "members": [
         {
           "role": "Team Leader",
-          "name": "Yash Ogale ",
+          "name": "Yash Ogale",
           "githubUsername": "yashogale30",
           "email": "ynogale_b23@et.vjti.ac.in"
         },
@@ -1708,13 +1708,13 @@
         },
         {
           "role": "Member 2",
-          "name": "Atharva Purushe ",
+          "name": "Atharva Purushe",
           "githubUsername": "AtharvaPuru"
         },
         {
           "role": "Member 3",
           "name": "Piyush Patil",
-          "githubUsername": "MAVERICK-111\r"
+          "githubUsername": "MAVERICK-111"
         }
       ],
       "repository": {
